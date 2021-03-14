@@ -1,0 +1,985 @@
+fileFormatVersion: 2
+guid: 6a0677b70b47e514c891bc435580451c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2672281412994431347
+    second: armourLegs_0
+  - first:
+      213: 1871854028803079045
+    second: armourLegs_1
+  - first:
+      213: 1558625137098681855
+    second: armourLegs_2
+  - first:
+      213: 2426138125298892616
+    second: armourLegs_3
+  - first:
+      213: 1598153394083721817
+    second: armourLegs_4
+  - first:
+      213: 3586628641353729016
+    second: armourLegs_5
+  - first:
+      213: -5825628914546634734
+    second: armourLegs_6
+  - first:
+      213: -1232912205933281777
+    second: armourLegs_7
+  - first:
+      213: -2632638755999862086
+    second: armourLegs_8
+  - first:
+      213: 8395960290084150702
+    second: armourLegs_9
+  - first:
+      213: 5933831948838670876
+    second: armourLegs_10
+  - first:
+      213: -35865380975650020
+    second: armourLegs_11
+  - first:
+      213: -5734459595140958747
+    second: armourLegs_12
+  - first:
+      213: -3099630668292722889
+    second: armourLegs_13
+  - first:
+      213: -1721807508694918636
+    second: armourLegs_14
+  - first:
+      213: -229868199521766497
+    second: armourLegs_15
+  - first:
+      213: -1146254508487471695
+    second: armourLegs_16
+  - first:
+      213: -6413711554382722483
+    second: armourLegs_17
+  - first:
+      213: 8643521459356414428
+    second: armourLegs_18
+  - first:
+      213: 8044790997737399315
+    second: armourLegs_19
+  - first:
+      213: -8002077978202313084
+    second: armourLegs_20
+  - first:
+      213: 5757902402265597007
+    second: armourLegs_21
+  - first:
+      213: -7759627338696404941
+    second: armourLegs_22
+  - first:
+      213: 1036727783421726474
+    second: armourLegs_23
+  - first:
+      213: 936434863932579869
+    second: armourLegs_24
+  - first:
+      213: -1188060619903397678
+    second: armourLegs_25
+  - first:
+      213: 2822067489962181893
+    second: armourLegs_26
+  - first:
+      213: 7246984197042987014
+    second: armourLegs_27
+  - first:
+      213: 4503005608406977974
+    second: armourLegs_28
+  - first:
+      213: -7493141592904282874
+    second: armourLegs_29
+  - first:
+      213: 185512710358902698
+    second: armourLegs_30
+  - first:
+      213: -1548954025274888099
+    second: armourLegs_31
+  - first:
+      213: 2582422789796930199
+    second: armourLegs_32
+  - first:
+      213: -3364406811895956720
+    second: armourLegs_33
+  - first:
+      213: 9047402846937944734
+    second: armourLegs_34
+  - first:
+      213: 1432171260139980061
+    second: armourLegs_35
+  - first:
+      213: -6878414705059948655
+    second: armourLegs_36
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: armourLegs_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 226
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379796969c9d51520800000000000000
+      internalID: 2672281412994431347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 226
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58bf03a52592af910800000000000000
+      internalID: 1871854028803079045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 226
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffde2c2ed4951a510800000000000000
+      internalID: 1558625137098681855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 226
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ff87e45cf5ba120800000000000000
+      internalID: 2426138125298892616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_4
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 226
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952f1f66b08cd2610800000000000000
+      internalID: 1598153394083721817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_5
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 226
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3812d1fb346c130800000000000000
+      internalID: 3586628641353729016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 226
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21014332e55372fa0800000000000000
+      internalID: -5825628914546634734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_7
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 226
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e7a1681e0d3eee0800000000000000
+      internalID: -1232912205933281777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_8
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 226
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2b3beeffcf67bd0800000000000000
+      internalID: -2632638755999862086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_9
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 162
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead50ce6661748470800000000000000
+      internalID: 8395960290084150702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_10
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 162
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12946bf7b4395250800000000000000
+      internalID: 5933831948838670876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_11
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 162
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b563340a4908ff0800000000000000
+      internalID: -35865380975650020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_12
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 162
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5fac4716b1b60b0800000000000000
+      internalID: -5734459595140958747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_13
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 162
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f61896456ebf4d0800000000000000
+      internalID: -3099630668292722889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_14
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 162
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a93a08139ea18e0800000000000000
+      internalID: -1721807508694918636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_15
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 162
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93b85627185fccf0800000000000000
+      internalID: -229868199521766497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_16
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 162
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd0a6ff89fa710f0800000000000000
+      internalID: -1146254508487471695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_17
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 162
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a0335925bedf6a0800000000000000
+      internalID: -6413711554382722483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_18
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 98
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1b761d8f4f3f770800000000000000
+      internalID: 8643521459356414428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_19
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 98
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314e5601ac6d4af60800000000000000
+      internalID: 8044790997737399315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_20
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 98
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e6644c978e2f090800000000000000
+      internalID: -8002077978202313084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_21
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 98
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44c86a6abd28ef40800000000000000
+      internalID: 5757902402265597007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_22
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 98
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33057973c04405490800000000000000
+      internalID: -7759627338696404941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_23
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 98
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f41ab1d62336e00800000000000000
+      internalID: 1036727783421726474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_24
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 98
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d102efb1c82eefc00800000000000000
+      internalID: 936434863932579869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_25
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 98
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0170b2929238fe0800000000000000
+      internalID: -1188060619903397678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_26
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 98
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505cf5f1e6ff92720800000000000000
+      internalID: 2822067489962181893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_27
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 34
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600ed952bb5729460800000000000000
+      internalID: 7246984197042987014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_28
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 34
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd80be2eb3ed7e30800000000000000
+      internalID: 4503005608406977974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_29
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 34
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d4c3feb63030890800000000000000
+      internalID: -7493141592904282874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_30
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 34
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa72342c3d2139200800000000000000
+      internalID: 185512710358902698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_31
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 34
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d50341e4582018ae0800000000000000
+      internalID: -1548954025274888099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_32
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 34
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79228b558db96d320800000000000000
+      internalID: 2582422789796930199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_33
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 34
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b790974d93f41d0800000000000000
+      internalID: -3364406811895956720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_34
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 34
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92189f34f4de8d70800000000000000
+      internalID: 9047402846937944734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armourLegs_35
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 34
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15ca225c2810e310800000000000000
+      internalID: 1432171260139980061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

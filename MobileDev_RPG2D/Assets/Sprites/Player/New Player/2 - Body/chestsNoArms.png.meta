@@ -1,0 +1,1093 @@
+fileFormatVersion: 2
+guid: abca8dab80109774cbbd3337c9a8255a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4101546696330587219
+    second: chestsNoArms_0
+  - first:
+      213: -8528360453019535945
+    second: chestsNoArms_1
+  - first:
+      213: 3659571602888763774
+    second: chestsNoArms_2
+  - first:
+      213: 3564951381823046967
+    second: chestsNoArms_3
+  - first:
+      213: -3131581590144660519
+    second: chestsNoArms_4
+  - first:
+      213: -1367236854008958156
+    second: chestsNoArms_5
+  - first:
+      213: -3525389256245651221
+    second: chestsNoArms_6
+  - first:
+      213: 8903875907909679454
+    second: chestsNoArms_7
+  - first:
+      213: -7293217899512480863
+    second: chestsNoArms_8
+  - first:
+      213: -3533659653018298905
+    second: chestsNoArms_9
+  - first:
+      213: -2719021481011257070
+    second: chestsNoArms_10
+  - first:
+      213: -1304582390659247092
+    second: chestsNoArms_11
+  - first:
+      213: -5589788401781171595
+    second: chestsNoArms_12
+  - first:
+      213: 8811621837572354787
+    second: chestsNoArms_13
+  - first:
+      213: 7372491079761157429
+    second: chestsNoArms_14
+  - first:
+      213: 870168564866565212
+    second: chestsNoArms_15
+  - first:
+      213: -6766710257238160507
+    second: chestsNoArms_16
+  - first:
+      213: -3683465587382604139
+    second: chestsNoArms_17
+  - first:
+      213: 2073202523528358510
+    second: chestsNoArms_18
+  - first:
+      213: 3447521183264743928
+    second: chestsNoArms_19
+  - first:
+      213: 6045302166820271947
+    second: chestsNoArms_20
+  - first:
+      213: 3610526609762995276
+    second: chestsNoArms_21
+  - first:
+      213: -2746432671040098324
+    second: chestsNoArms_22
+  - first:
+      213: 8667956871811717305
+    second: chestsNoArms_23
+  - first:
+      213: -3840883671025224526
+    second: chestsNoArms_24
+  - first:
+      213: -8371496124631789157
+    second: chestsNoArms_25
+  - first:
+      213: 3625564575750595258
+    second: chestsNoArms_26
+  - first:
+      213: -350438709255069811
+    second: chestsNoArms_27
+  - first:
+      213: 8544839197101091347
+    second: chestsNoArms_28
+  - first:
+      213: 4673403204687003263
+    second: chestsNoArms_29
+  - first:
+      213: -7793013554939547271
+    second: chestsNoArms_30
+  - first:
+      213: -8383834899271923728
+    second: chestsNoArms_31
+  - first:
+      213: 2447947757931730084
+    second: chestsNoArms_32
+  - first:
+      213: -2861329660718413748
+    second: chestsNoArms_33
+  - first:
+      213: 266794725253331334
+    second: chestsNoArms_34
+  - first:
+      213: 943495440252784489
+    second: chestsNoArms_35
+  - first:
+      213: -5835405014925410819
+    second: chestsNoArms_0
+  - first:
+      213: -471625211331191109
+    second: chestsNoArms_1
+  - first:
+      213: 9214550779343517854
+    second: chestsNoArms_2
+  - first:
+      213: -5279887480178649491
+    second: chestsNoArms_3
+  - first:
+      213: -8084963258300959755
+    second: chestsNoArms_4
+  - first:
+      213: -4304298357840535807
+    second: chestsNoArms_5
+  - first:
+      213: -7613222813027990428
+    second: chestsNoArms_6
+  - first:
+      213: 575132242349306046
+    second: chestsNoArms_7
+  - first:
+      213: 8778608270723638629
+    second: chestsNoArms_8
+  - first:
+      213: -2912452188154130410
+    second: chestsNoArms_9
+  - first:
+      213: 7459454499594137605
+    second: chestsNoArms_10
+  - first:
+      213: -2781423116184789255
+    second: chestsNoArms_11
+  - first:
+      213: 6978404583730899722
+    second: chestsNoArms_12
+  - first:
+      213: -6945404203694759793
+    second: chestsNoArms_13
+  - first:
+      213: 5708732826692423278
+    second: chestsNoArms_14
+  - first:
+      213: 7693137721201671833
+    second: chestsNoArms_15
+  - first:
+      213: 3160062274497153954
+    second: chestsNoArms_16
+  - first:
+      213: -8770620469886525746
+    second: chestsNoArms_17
+  - first:
+      213: -3298773117477976233
+    second: chestsNoArms_18
+  - first:
+      213: -3292854400215190870
+    second: chestsNoArms_19
+  - first:
+      213: -7201021652688750605
+    second: chestsNoArms_20
+  - first:
+      213: -8506792214659074856
+    second: chestsNoArms_21
+  - first:
+      213: -3302123201265164775
+    second: chestsNoArms_22
+  - first:
+      213: -198643670845594870
+    second: chestsNoArms_23
+  - first:
+      213: -7035696808998338190
+    second: chestsNoArms_24
+  - first:
+      213: -8803035289497655539
+    second: chestsNoArms_25
+  - first:
+      213: -3503580632055496056
+    second: chestsNoArms_26
+  - first:
+      213: 6819820769319595232
+    second: chestsNoArms_27
+  - first:
+      213: 7492650275944735672
+    second: chestsNoArms_28
+  - first:
+      213: -2918134860861241781
+    second: chestsNoArms_29
+  - first:
+      213: 4641978154817833877
+    second: chestsNoArms_30
+  - first:
+      213: 5888959270621961696
+    second: chestsNoArms_31
+  - first:
+      213: 2455489875220024911
+    second: chestsNoArms_32
+  - first:
+      213: -530624389850834129
+    second: chestsNoArms_33
+  - first:
+      213: 4700355525060380430
+    second: chestsNoArms_34
+  - first:
+      213: 3538290981819374412
+    second: chestsNoArms_35
+  - first:
+      213: 7191703601743349185
+    second: chestsNoArms_36
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: chestsNoArms_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 206
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd76d46e0a740fa0800000000000000
+      internalID: -5835405014925410819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 206
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe5c7b7e537479f0800000000000000
+      internalID: -471625211331191109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 206
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e98b19fec19a0ef70800000000000000
+      internalID: 9214550779343517854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 206
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d665be19f421ab6b0800000000000000
+      internalID: -5279887480178649491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_4
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 206
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3f2e6a0c07ccf80800000000000000
+      internalID: -8084963258300959755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_5
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 206
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f1e9dd27f0444c0800000000000000
+      internalID: -4304298357840535807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 206
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46401992036685690800000000000000
+      internalID: -7613222813027990428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_7
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 206
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0ba1c2ab74bf700800000000000000
+      internalID: 575132242349306046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_8
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 206
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565e9ce06b1e3d970800000000000000
+      internalID: 8778608270723638629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_9
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 142
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61093cb6a24e497d0800000000000000
+      internalID: -2912452188154130410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_10
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 142
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5007f72785e458760800000000000000
+      internalID: 7459454499594137605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_11
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 142
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fedeb599666669d0800000000000000
+      internalID: -2781423116184789255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_12
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 142
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0bec38eef548d060800000000000000
+      internalID: 6978404583730899722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_13
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 142
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80e441dca7fc9f90800000000000000
+      internalID: -6945404203694759793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_14
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 142
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e0d9c724e793f40800000000000000
+      internalID: 5708732826692423278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_15
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 142
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e32685ff383ca60800000000000000
+      internalID: 7693137721201671833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_16
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 142
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab048b55ebcadb20800000000000000
+      internalID: 3160062274497153954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_17
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 142
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eced4a0c62f784680800000000000000
+      internalID: -8770620469886525746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_18
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 78
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7570e1ac3576832d0800000000000000
+      internalID: -3298773117477976233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_19
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 78
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2771a8e5e6d42d0800000000000000
+      internalID: -3292854400215190870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_20
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 78
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f73793a5f4d01c90800000000000000
+      internalID: -7201021652688750605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_21
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 78
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4ff2b3d8dc1f980800000000000000
+      internalID: -8506792214659074856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_22
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 78
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e9300a1708c22d0800000000000000
+      internalID: -3302123201265164775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_23
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 78
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a036e5242a64e3df0800000000000000
+      internalID: -198643670845594870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_24
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 78
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2710e48670f2c5e90800000000000000
+      internalID: -7035696808998338190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_25
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 78
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d07a3407b0655d580800000000000000
+      internalID: -8803035289497655539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_26
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 78
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882c4685af7c06fc0800000000000000
+      internalID: -3503580632055496056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_27
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 14
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec20235bded4ae50800000000000000
+      internalID: 6819820769319595232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_28
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 14
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b32beb6abd3bf760800000000000000
+      internalID: 7492650275944735672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_29
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 14
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b468ea31ec3b087d0800000000000000
+      internalID: -2918134860861241781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_30
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 14
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b4a0d998e9b6040800000000000000
+      internalID: 4641978154817833877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_31
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 14
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed5a2e6149c9b150800000000000000
+      internalID: 5888959270621961696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_32
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 14
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ece022807a31220800000000000000
+      internalID: 2455489875220024911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_33
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 14
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b58c5cde7d2a8f0800000000000000
+      internalID: -530624389850834129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_34
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 14
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07c44d42740b3140800000000000000
+      internalID: 4700355525060380430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chestsNoArms_35
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 14
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4bdf4bb6e88a1130800000000000000
+      internalID: 3538290981819374412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

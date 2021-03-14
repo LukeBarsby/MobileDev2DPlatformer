@@ -1,0 +1,1162 @@
+fileFormatVersion: 2
+guid: 6de49c06222cb5447a5b36ee29fbf2b6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8380975221231663414
+    second: feet_0
+  - first:
+      213: 2186869086614673543
+    second: feet_1
+  - first:
+      213: -3044643553836137179
+    second: feet_2
+  - first:
+      213: 2496244298679498141
+    second: feet_3
+  - first:
+      213: -4391620728025793283
+    second: feet_4
+  - first:
+      213: -8665169984639256270
+    second: feet_5
+  - first:
+      213: 821651129404555435
+    second: feet_6
+  - first:
+      213: -6673122288599224397
+    second: feet_7
+  - first:
+      213: -5131349273465298890
+    second: feet_8
+  - first:
+      213: -4639673751420128054
+    second: feet_9
+  - first:
+      213: -7088831133553586389
+    second: feet_10
+  - first:
+      213: 9204154343990196028
+    second: feet_11
+  - first:
+      213: 2519790729290954114
+    second: feet_12
+  - first:
+      213: -5559806851287359306
+    second: feet_13
+  - first:
+      213: 5955100489074523664
+    second: feet_14
+  - first:
+      213: -8348517134857323527
+    second: feet_15
+  - first:
+      213: 765457650491679143
+    second: feet_16
+  - first:
+      213: 2395418146560047482
+    second: feet_17
+  - first:
+      213: 749341902332063996
+    second: feet_18
+  - first:
+      213: 7355041553310634700
+    second: feet_19
+  - first:
+      213: -2591025223337094606
+    second: feet_20
+  - first:
+      213: 1718184804535440928
+    second: feet_21
+  - first:
+      213: -559084480317154217
+    second: feet_22
+  - first:
+      213: -1716007424776226379
+    second: feet_23
+  - first:
+      213: -7326982983942353612
+    second: feet_24
+  - first:
+      213: -4547537493745897861
+    second: feet_25
+  - first:
+      213: -6678346515125919596
+    second: feet_26
+  - first:
+      213: -5717378898529909826
+    second: feet_27
+  - first:
+      213: -1793326694523582469
+    second: feet_28
+  - first:
+      213: -7120295809483636064
+    second: feet_29
+  - first:
+      213: -6892484552580869306
+    second: feet_30
+  - first:
+      213: 8554396608596028254
+    second: feet_31
+  - first:
+      213: -7453228799043940731
+    second: feet_32
+  - first:
+      213: -4673460298359501779
+    second: feet_33
+  - first:
+      213: 2484862625768790855
+    second: feet_34
+  - first:
+      213: 3023523259603104484
+    second: feet_35
+  - first:
+      213: 5234868926721180065
+    second: feet_36
+  - first:
+      213: -4702185410077046676
+    second: feet_37
+  - first:
+      213: -6318482239937868635
+    second: feet_38
+  - first:
+      213: -8138689863096530327
+    second: feet_39
+  - first:
+      213: -6782642624758311128
+    second: feet_40
+  - first:
+      213: 5270676675130004426
+    second: feet_41
+  - first:
+      213: 3695895639051788392
+    second: feet_42
+  - first:
+      213: 2034594439426644894
+    second: feet_43
+  - first:
+      213: -8774783353491759645
+    second: feet_44
+  - first:
+      213: 1922098759293324328
+    second: feet_45
+  - first:
+      213: 6986581201734090208
+    second: feet_46
+  - first:
+      213: -3923681998847044676
+    second: feet_47
+  - first:
+      213: -67973883178652696
+    second: feet_48
+  - first:
+      213: 7046862202959094132
+    second: feet_49
+  - first:
+      213: -3051001570078947658
+    second: feet_50
+  - first:
+      213: -1754296284350521800
+    second: feet_51
+  - first:
+      213: -59537059040201336
+    second: feet_52
+  - first:
+      213: -3124761932114284313
+    second: feet_53
+  - first:
+      213: -7061240797503719804
+    second: feet_54
+  - first:
+      213: 4481382492382701158
+    second: feet_55
+  - first:
+      213: -4045762942819227052
+    second: feet_56
+  - first:
+      213: -8214843272701776995
+    second: feet_57
+  - first:
+      213: 2660098326665939914
+    second: feet_58
+  - first:
+      213: 8395014537338488235
+    second: feet_59
+  - first:
+      213: 7033622692240170069
+    second: feet_0
+  - first:
+      213: 3221648331761635469
+    second: feet_3
+  - first:
+      213: -4473687335347294015
+    second: feet_5
+  - first:
+      213: -5836501983324116160
+    second: feet_7
+  - first:
+      213: 2891693015440328990
+    second: feet_8
+  - first:
+      213: -6163261795206206586
+    second: feet_10
+  - first:
+      213: 6579370080001249485
+    second: feet_12
+  - first:
+      213: 6224619427747453630
+    second: feet_14
+  - first:
+      213: 8840080503405023237
+    second: feet_16
+  - first:
+      213: -5575076554672660400
+    second: feet_18
+  - first:
+      213: -2229422277412522222
+    second: feet_20
+  - first:
+      213: 1479560393856302238
+    second: feet_22
+  - first:
+      213: 7573103614147595972
+    second: feet_23
+  - first:
+      213: 3389101659948970171
+    second: feet_24
+  - first:
+      213: 2723773300859031637
+    second: feet_25
+  - first:
+      213: 7630472795197951214
+    second: feet_27
+  - first:
+      213: 1444648109549183336
+    second: feet_28
+  - first:
+      213: 1109693969769689135
+    second: feet_29
+  - first:
+      213: 5374584750928832134
+    second: feet_30
+  - first:
+      213: 8970272211736456667
+    second: feet_32
+  - first:
+      213: -6067014743181319708
+    second: feet_35
+  - first:
+      213: 2923037374255247369
+    second: feet_1
+  - first:
+      213: 574087690054847109
+    second: feet_2
+  - first:
+      213: 1510915497627603455
+    second: feet_4
+  - first:
+      213: 7342956386968123108
+    second: feet_6
+  - first:
+      213: -3282174116947860094
+    second: feet_9
+  - first:
+      213: 8666247686639100094
+    second: feet_11
+  - first:
+      213: -6886259355094741696
+    second: feet_13
+  - first:
+      213: -2222006232882110964
+    second: feet_15
+  - first:
+      213: -733943010264786978
+    second: feet_17
+  - first:
+      213: -6658727229753931245
+    second: feet_19
+  - first:
+      213: -788352697686430790
+    second: feet_21
+  - first:
+      213: -561986367554173750
+    second: feet_26
+  - first:
+      213: -7296131281208718617
+    second: feet_31
+  - first:
+      213: -7621795403245579474
+    second: feet_33
+  - first:
+      213: -209077605018973377
+    second: feet_34
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: feet_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c1a17a2927c9160800000000000000
+      internalID: 7033622692240170069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80d1e5b61895bc20800000000000000
+      internalID: 3221648331761635469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_5
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0f57432154ae1c0800000000000000
+      internalID: -4473687335347294015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_7
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b6a198e54900fa0800000000000000
+      internalID: -5836501983324116160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_8
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e198cc80a7b512820800000000000000
+      internalID: 2891693015440328990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_10
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b6ff63d02b77aa0800000000000000
+      internalID: -6163261795206206586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_12
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0de409a3e9e4b50800000000000000
+      internalID: 6579370080001249485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_14
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebad1ecd36a426650800000000000000
+      internalID: 6224619427747453630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_16
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 500105f81664eaa70800000000000000
+      internalID: 8840080503405023237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_18
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 050a02b596951a2b0800000000000000
+      internalID: -5575076554672660400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_20
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 217fb7c20408f01e0800000000000000
+      internalID: -2229422277412522222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_22
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9cba83d654788410800000000000000
+      internalID: 1479560393856302238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_23
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce8e70fc91191960800000000000000
+      internalID: 7573103614147595972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_24
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0f1f4e002880f20800000000000000
+      internalID: 3389101659948970171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_25
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 550556ec269ccc520800000000000000
+      internalID: 2723773300859031637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_27
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 44
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec4e0a4492e4e960800000000000000
+      internalID: 7630472795197951214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_28
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 44
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8616e133dcb6c0410800000000000000
+      internalID: 1444648109549183336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_29
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 44
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f20f38d39cc666f00800000000000000
+      internalID: 1109693969769689135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_30
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 44
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686285eea5c569a40800000000000000
+      internalID: 5374584750928832134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_32
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 44
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bddeb1fcc0fcc7c70800000000000000
+      internalID: 8970272211736456667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_35
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 44
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e1ae994c32adcba0800000000000000
+      internalID: -6067014743181319708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900bca54107b09820800000000000000
+      internalID: 2923037374255247369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_2
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ac4a366b197f700800000000000000
+      internalID: 574087690054847109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_4
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1d9b1d3a9d7f410800000000000000
+      internalID: 1510915497627603455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_6
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6bb66edeb67e560800000000000000
+      internalID: 7342956386968123108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_9
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2856754c7006372d0800000000000000
+      internalID: -3282174116947860094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_11
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0aca1fa52b44870800000000000000
+      internalID: 8666247686639100094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_13
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d0e5cf9971f60a0800000000000000
+      internalID: -6886259355094741696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_15
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e9b589a19d921e0800000000000000
+      internalID: -2222006232882110964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_17
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed759c388b280d5f0800000000000000
+      internalID: -733943010264786978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_19
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31acb4e2dd27793a0800000000000000
+      internalID: -6658727229753931245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_21
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbeda8f5653f05f0800000000000000
+      internalID: -788352697686430790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_26
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac44251506c6338f0800000000000000
+      internalID: -561986367554173750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_31
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 44
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea40fc914feeba90800000000000000
+      internalID: -7296131281208718617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_33
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 44
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2397d67671f93690800000000000000
+      internalID: -7621795403245579474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feet_34
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 44
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3bca56a605391df0800000000000000
+      internalID: -209077605018973377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
