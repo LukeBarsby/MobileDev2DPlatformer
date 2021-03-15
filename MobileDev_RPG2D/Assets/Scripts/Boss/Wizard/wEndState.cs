@@ -10,7 +10,9 @@ public class wEndState : State
     }
     public override void Start()
     {
-        base.Start();
+        Debug.Log("scream");
+        Debug.Log("UI screen to exit manually or return to menu");
+        Debug.Log("dead sprite");
     }
 
     public override void Update()

@@ -11,16 +11,34 @@ public class wRushAttackState : State
 
     public override void Start()
     {
-        Debug.Log("wRushAttackState");
+        //System.Array.Reverse(wizardObj.rushPoints);
+        wizardObj.rushPointCounter = 0;
     }
 
     public override void Update()
     {
-        Debug.Log("wRushAttackState Update");
+        RushAttackSate();
+    }
+
+    void RushAttackSate()
+    {
+        wizardObj.hitCollider.enabled = false;
+        for (int i = 0; i < wizardObj.rushPoints.Length; i++)
+        {
+            if (wizardObj.rushPointCounter == i)
+            {
+                wizardObj.transform.position = Vector2.MoveTowards(wizardObj.transform.position, wizardObj.rushPoints[i].transform.position, wizardObj.rushSpeed * Time.deltaTime);
+            }
+            if (wizardObj.rushPointCounter == wizardObj.rushPoints.Length)
+            {
+                End();
+            }
+        }
+
     }
 
     public override void End()
     {
-        base.End();
+        wizardObj.SetState(new wRandomMove(wizardObj));
     }
 }

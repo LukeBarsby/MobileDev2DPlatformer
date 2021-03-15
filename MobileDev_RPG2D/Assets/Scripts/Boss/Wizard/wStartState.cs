@@ -7,12 +7,14 @@ public class wStartState : State
     public wStartState(Wizard wizard) : base(wizard){}
     public override void Start()
     {
-        Debug.Log("StartState");
+        Debug.Log("Boss appears");
+        Debug.Log("Play Scream");
+        Debug.Log("Boss Music");
+        wizardObj.SetState(new wChangeState(wizardObj));
     }
 
     public override void Update()
     {
-        Debug.Log("StartState Update");
     }
 
     public override void End()
