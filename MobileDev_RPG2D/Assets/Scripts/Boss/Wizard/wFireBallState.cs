@@ -44,7 +44,8 @@ public class wFireBallState : State
         for (int i = 0; i < firebllQueue.Count; i++)
         {
             firebllQueue[i].GetComponent<FireballController>().SetDirection();
-            if (i == firebllQueue.Count)
+
+            if (i == firebllQueue.Count - 1)
             {
                 End();
             }
