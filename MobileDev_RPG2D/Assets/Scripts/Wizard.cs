@@ -6,10 +6,7 @@ using UnityEngine.AI;
 
 public class Wizard : StateMachine
 {
-    public enum State
-    {
 
-    }
     #region Enemy Vals
     [SerializeField] float _damage = default;
     [SerializeField] public float rushSpeed = default;
@@ -34,7 +31,7 @@ public class Wizard : StateMachine
     #region Components
     Rigidbody2D rb;
     SpriteRenderer spriteRenderer;
-    public CircleCollider2D hitCollider;
+    public BoxCollider2D hitCollider;
     #endregion
 
     #region Effects
@@ -49,15 +46,15 @@ public class Wizard : StateMachine
     [SerializeField] public GameObject fireBallPrefab = default;
     [SerializeField] public GameObject GreenLaserSpin = default;
     [SerializeField] public Transform bossSpawn = default;
-     public bool returnedToSpawnPos;
     [HideInInspector] public float rushPointCounter = 0;
+    public bool returnedToSpawnPos;
     
     #endregion
 
     void Start()
     {
         spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
-        agent = GetComponent<NavMeshAgent>();
+        agent = transform.parent.GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody2D>();
         if (FindObjectOfType<PlayerController>() != null)
         {

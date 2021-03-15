@@ -10,7 +10,7 @@ public class wGreenLaserState : State
     }
 
     Quaternion q;
-    float laserTime = 10;
+    float laserTime = 6;
 
     public override void Start()
     {
@@ -34,7 +34,7 @@ public class wGreenLaserState : State
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         q = Quaternion.AngleAxis(angle + 90, Vector3.forward);
 
-        wizardObj.GreenLaserSpin.transform.rotation = Quaternion.Lerp(wizardObj.GreenLaserSpin.transform.rotation, q, 2 * Time.deltaTime);
+        wizardObj.GreenLaserSpin.transform.rotation = Quaternion.Lerp(wizardObj.GreenLaserSpin.transform.rotation, q, 2.5f * Time.deltaTime);
 
     }
 

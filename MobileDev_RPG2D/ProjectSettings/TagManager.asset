@@ -10,6 +10,8 @@ TagManager:
   - EnterPoint
   - RushPoint
   - BossSpawn
+  - Laser
+  - BossRush
   layers:
   - Default
   - TransparentFX

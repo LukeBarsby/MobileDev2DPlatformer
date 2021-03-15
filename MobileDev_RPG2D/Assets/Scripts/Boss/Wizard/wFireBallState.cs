@@ -33,7 +33,7 @@ public class wFireBallState : State
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < wizardObj.fireBallLocations.Length; i++)
         {
-            GameObject firebll = MonoBehaviour.Instantiate(wizardObj.fireBallPrefab, wizardObj.fireBallLocations[i].transform.position, Quaternion.identity);
+            GameObject firebll = ObjectPooler.Instance.SpawnFromPool("Fireball", wizardObj.fireBallLocations[i].transform.position, Quaternion.identity);
             firebllQueue.Add(firebll);
             yield return new WaitForSeconds(.5f);
         }
@@ -43,8 +43,7 @@ public class wFireBallState : State
     {
         for (int i = 0; i < firebllQueue.Count; i++)
         {
-            firebllQueue[i].GetComponent<FireballController>().SetDirection();
-
+            firebllQueue[i].GetComponent<ProjectileController>().ShootFireBall();
             if (i == firebllQueue.Count - 1)
             {
                 End();
@@ -55,7 +54,6 @@ public class wFireBallState : State
 
     public override void End()
     {
-        Debug.Log("changeState");
         wizardObj.SetState(new wRandomMove(wizardObj));
     }
 }

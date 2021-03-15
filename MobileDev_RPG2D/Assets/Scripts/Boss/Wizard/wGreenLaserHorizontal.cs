@@ -9,7 +9,7 @@ public class wGreenLaserHorizontal : State
 
     }
 
-    float stateTimer = 10;
+    float stateTimer = 6;
     float gTimer;
     int itemToRemove;
     int randNum;
@@ -38,7 +38,7 @@ public class wGreenLaserHorizontal : State
             wizardObj.GreenLaserLocations[randNum].SetActive(true);
             itemToRemove = randNum;
             gTimer = 0;
-            gTimer = 5;
+            gTimer = 2;
 
         }
 

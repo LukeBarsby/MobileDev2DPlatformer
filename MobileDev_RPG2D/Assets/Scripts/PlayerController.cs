@@ -128,7 +128,11 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] GameObject ChestOpenPanel = default;
     Item item;
     GameObject chest;
-    #endregion 
+    #endregion
+
+    #region TicDamage
+    [SerializeField] float laserDamage = default;
+    #endregion
 
     void Awake()
     {
@@ -369,11 +373,6 @@ public class PlayerController : Singleton<PlayerController>
             blockTimer = blockTime;
             
         }
-        //else if (closestEnemy != null)
-        //{
-        //    Vector3 dir = closestEnemy.transform.position - transform.position;
-        //    transform.position += dir * playerKnockback;
-        //}
         else if (!canBlock || Input.touchCount > 0)
         {
             currentHealth -= damage;
@@ -382,6 +381,10 @@ public class PlayerController : Singleton<PlayerController>
                 Die();
             }
         }
+    }
+    public void TakeTicDamage(float damage)
+    {
+        currentHealth -= damage * Time.deltaTime;
     }
     void Die()
     {
@@ -567,10 +570,14 @@ public class PlayerController : Singleton<PlayerController>
             enemyCount.Add(collision.gameObject);
         }
 
+        if (collision.tag == "BossRush")
+        {
+            TakeDamage(30);
+        }
+
         WorldItem worldItem = collision.GetComponent<WorldItem>();
         if (worldItem != null)
         {
-            //touching world item
             inventory.AddItem(worldItem.GetItem());
             worldItem.DestroySelf();
         }
@@ -578,6 +585,14 @@ public class PlayerController : Singleton<PlayerController>
     void OnTriggerExit2D(Collider2D collision)
     {
         enemyCount.Remove(collision.gameObject);
+    }
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Laser")
+        {
+            TakeTicDamage(laserDamage);
+        }    
     }
 
     private void Anim()

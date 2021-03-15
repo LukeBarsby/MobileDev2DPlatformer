@@ -12,6 +12,7 @@ public class wRushAttackState : State
     public override void Start()
     {
         //System.Array.Reverse(wizardObj.rushPoints);
+        wizardObj.transform.gameObject.tag = "BossRush";
         wizardObj.rushPointCounter = 0;
     }
 
@@ -39,6 +40,8 @@ public class wRushAttackState : State
 
     public override void End()
     {
+        wizardObj.transform.gameObject.tag = "Enemy";
+        wizardObj.hitCollider.enabled = true;
         wizardObj.SetState(new wRandomMove(wizardObj));
     }
 }

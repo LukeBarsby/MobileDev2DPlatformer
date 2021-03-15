@@ -9412,7 +9412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1118910071128896375, guid: a01f7ff56ff2e1f42b6063f40afdb527, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1118910071961737021, guid: a01f7ff56ff2e1f42b6063f40afdb527, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -9524,7 +9524,11 @@ PrefabInstance:
       objectReference: {fileID: 186188494}
     - target: {fileID: 7952284811642588895, guid: a01f7ff56ff2e1f42b6063f40afdb527, type: 3}
       propertyPath: speed
-      value: 5
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952284811642588895, guid: a01f7ff56ff2e1f42b6063f40afdb527, type: 3}
+      propertyPath: laserDamage
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a01f7ff56ff2e1f42b6063f40afdb527, type: 3}
