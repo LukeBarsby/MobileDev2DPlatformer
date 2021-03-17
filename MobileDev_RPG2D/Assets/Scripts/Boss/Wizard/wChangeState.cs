@@ -10,7 +10,7 @@ public class wChangeState : State
 
     public override void Start()
     {
-        wizardObj.agent.isStopped = false;
+        Random.InitState(System.Environment.TickCount);
         randomNum = Random.Range(0, 4);
     }
 
@@ -30,14 +30,13 @@ public class wChangeState : State
 
     public override void End()
     {
-        wizardObj.agent.isStopped = true;
         switch (randomNum)
         {
             case 0:
-                wizardObj.SetState(new wFireBallState(wizardObj));
+                wizardObj.SetState(new wRushAttackState(wizardObj));
                 break;
             case 1:
-                wizardObj.SetState(new wRushAttackState(wizardObj));
+                wizardObj.SetState(new wFireBallState(wizardObj));
                 break;
             case 2:
                 wizardObj.SetState(new wGreenLaserState(wizardObj));

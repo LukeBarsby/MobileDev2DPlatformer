@@ -40,6 +40,7 @@ public class ProjectileController : MonoBehaviour, IPooledObject
             case ProjectileType.EnemyFireball:
                 if (shoot)
                 {
+                    AddValues(speed, damage, (PlayerController.Instance.transform.position - transform.position).normalized, collisionLayer);
                     Fire();
                 }
                 break;
@@ -83,6 +84,10 @@ public class ProjectileController : MonoBehaviour, IPooledObject
                 collision.transform.GetComponent<PlayerController>().TakeDamage(damage);
             }
         }
+        else
+        {
+            ResetObj();
+        }
 
     }
 
@@ -104,10 +109,6 @@ public class ProjectileController : MonoBehaviour, IPooledObject
         if (fireMode == ProjectileType.PlayerArrow)
         {
             AddValues(speed, PlayerController.Instance.rangeDamage, (PlayerController.Instance.closestEnemy.transform.position - PlayerController.Instance.transform.position).normalized, collisionLayer);
-        }
-        else if (fireMode == ProjectileType.EnemyFireball)
-        {
-            AddValues(speed, damage, (PlayerController.Instance.transform.position - transform.position).normalized, collisionLayer);
         }
     }
 }

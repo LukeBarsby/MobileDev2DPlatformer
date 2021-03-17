@@ -12,6 +12,7 @@ TagManager:
   - BossSpawn
   - Laser
   - BossRush
+  - Wall
   layers:
   - Default
   - TransparentFX

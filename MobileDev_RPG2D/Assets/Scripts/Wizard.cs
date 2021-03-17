@@ -10,6 +10,7 @@ public class Wizard : StateMachine
     #region Enemy Vals
     [SerializeField] float _damage = default;
     [SerializeField] public float rushSpeed = default;
+    [SerializeField] public float rushAcceleration = default;
     [SerializeField] float _maxHealth = default;
     [SerializeField] public float _idleMaxDistnce = default;
     [SerializeField] float _attackSpeed = default;
