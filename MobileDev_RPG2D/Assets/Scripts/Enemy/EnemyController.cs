@@ -120,6 +120,7 @@ public class EnemyController : MonoBehaviour
             oldPos = transform.position;
             timer = 0;
             timer += 5f;
+            
         }
         transform.position = Vector2.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
         timer -= Time.deltaTime;

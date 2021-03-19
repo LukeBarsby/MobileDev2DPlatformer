@@ -6,6 +6,12 @@ public class Chest : MonoBehaviour
 {
     public Item m_Item;
     public bool ItembeenTaken = false;
+    Animator anim;
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
     public Item ReturnItem()
     {
         return m_Item;
@@ -14,7 +20,8 @@ public class Chest : MonoBehaviour
     {
         if (collision.tag == "Player" && !ItembeenTaken)
         {
-            PlayerController.Instance.OpenChestUI(m_Item, this.gameObject); 
+            PlayerController.Instance.OpenChestUI(m_Item, this.gameObject);
+            anim.Play("OpenChest");
         }
     }
 
@@ -23,6 +30,7 @@ public class Chest : MonoBehaviour
         if (collision.tag == "Player" && !ItembeenTaken)
         {
             PlayerController.Instance.OpenChestUI(m_Item, this.gameObject);
+            
         }
     }
 

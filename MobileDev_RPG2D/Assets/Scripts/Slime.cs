@@ -13,6 +13,8 @@ public class Slime : Enemy
     [SerializeField] float _attackSpeed = default;
     [SerializeField] float _attackRange = default;
     [SerializeField] float _sightRange = default;
+    bool attacking;
+    Animate animate;
     #endregion
 
     #region UI
@@ -44,11 +46,14 @@ public class Slime : Enemy
         {
             target = FindObjectOfType<PlayerController>().gameObject;
         }
+        animate = GetComponentInChildren<Animate>();
     }
 
     private void Update()
     {
         _slider.value = currentHealth / 100;
+        attacking = isAttacking;
+        animate.SetAttacking(attacking);
     }
 
 

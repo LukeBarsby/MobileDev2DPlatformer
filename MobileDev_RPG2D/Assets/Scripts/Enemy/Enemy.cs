@@ -16,6 +16,7 @@ public abstract class Enemy : MonoBehaviour
     protected float sightRange;
     protected bool inSightRange;
     protected bool inAttackRange;
+    protected bool isAttacking;
     bool hit;
     float hitTimer;
     #endregion
@@ -59,14 +60,17 @@ public abstract class Enemy : MonoBehaviour
 
         if (!inSightRange && !inAttackRange)
         {
+            isAttacking = false;
             RandomMove();
         }
         else if (inSightRange)
         {
+            isAttacking = false;
             MoveToTarget();
         }
         else if (inAttackRange)
         {
+            isAttacking = true;
             AttackTarget();
         }
 
@@ -81,6 +85,7 @@ public abstract class Enemy : MonoBehaviour
     {
         if (timer <= 0)
         {
+            agent.isStopped = true;
             PlayerController.Instance.TakeDamage(damage);
 
             timer = 0;
@@ -92,6 +97,14 @@ public abstract class Enemy : MonoBehaviour
     public virtual void MoveToTarget()
     {
         agent.destination = target.transform.position;
+        if (agent.remainingDistance < .1f)
+        {
+            agent.isStopped = true;
+        }
+        else
+        {
+            agent.isStopped = false;
+        }
     }
     public virtual void RandomMove()
     {
@@ -99,14 +112,21 @@ public abstract class Enemy : MonoBehaviour
         {
             Vector3 randomDir = Random.insideUnitSphere * idleMaxDistnce;
             randomDir += transform.position;
-
             NavMeshHit hit;
             // -1 = all layers
             NavMesh.SamplePosition(randomDir, out hit, idleMaxDistnce, -1);
             goal = hit.position;
-
             timer = 0;
             timer = 5;
+        }
+        
+        if (agent.remainingDistance < .05f)
+        {
+            agent.isStopped = true;
+        }
+        else
+        {
+            agent.isStopped = false;
         }
         timer -= Time.deltaTime;
         agent.updateRotation = false;

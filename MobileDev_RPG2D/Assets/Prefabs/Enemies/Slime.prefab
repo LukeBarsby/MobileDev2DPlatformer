@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 235945919121766464}
   - component: {fileID: 171950872}
   - component: {fileID: 1753109560}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Slime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -127,7 +127,8 @@ GameObject:
   - component: {fileID: 8820849150627555954}
   - component: {fileID: 250714621}
   - component: {fileID: 250714622}
-  m_Layer: 8
+  - component: {fileID: 1259354630}
+  m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,6 +219,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1259354630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5880054267383315214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4fa020f6213bc645b7ebcee7a9be8a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4701190664063608765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -225,6 +238,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 235945919752045534}
     m_Modifications:
+    - target: {fileID: 4790637652031287737, guid: 53886e1d3d68a4444bfa5b619b698c10, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790637652321192098, guid: 53886e1d3d68a4444bfa5b619b698c10, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4790637652321192099, guid: 53886e1d3d68a4444bfa5b619b698c10, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -236,6 +257,10 @@ PrefabInstance:
     - target: {fileID: 4790637653095720571, guid: 53886e1d3d68a4444bfa5b619b698c10, type: 3}
       propertyPath: m_Name
       value: HealthBar_Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790637653095720571, guid: 53886e1d3d68a4444bfa5b619b698c10, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4790637653095720580, guid: 53886e1d3d68a4444bfa5b619b698c10, type: 3}
       propertyPath: m_LocalPosition.x
@@ -320,6 +345,10 @@ PrefabInstance:
     - target: {fileID: 4790637653095720580, guid: 53886e1d3d68a4444bfa5b619b698c10, type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790637653461029568, guid: 53886e1d3d68a4444bfa5b619b698c10, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53886e1d3d68a4444bfa5b619b698c10, type: 3}

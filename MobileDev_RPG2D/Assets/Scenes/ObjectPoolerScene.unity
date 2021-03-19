@@ -157,7 +157,7 @@ MonoBehaviour:
     prefab: {fileID: 6246071560812985907, guid: 07845854e6909d9428592eb8b471231b, type: 3}
     size: 10
   - tag: EnemyArrow
-    prefab: {fileID: 6246071560812985907, guid: 029283297fbcc8a4081586434f3deca6, type: 3}
+    prefab: {fileID: 7657251709305314750, guid: fb9b6390ddafe554384da9900e53faf1, type: 3}
     size: 10
   - tag: Fireball
     prefab: {fileID: 7462241949543918457, guid: a5c2c18bbdce324418a93111a2969fea, type: 3}

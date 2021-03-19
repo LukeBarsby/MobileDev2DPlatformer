@@ -13,6 +13,7 @@ TagManager:
   - Laser
   - BossRush
   - Wall
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX

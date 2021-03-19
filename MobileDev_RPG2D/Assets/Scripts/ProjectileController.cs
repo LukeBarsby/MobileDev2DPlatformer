@@ -110,5 +110,9 @@ public class ProjectileController : MonoBehaviour, IPooledObject
         {
             AddValues(speed, PlayerController.Instance.rangeDamage, (PlayerController.Instance.closestEnemy.transform.position - PlayerController.Instance.transform.position).normalized, collisionLayer);
         }
+        if (fireMode == ProjectileType.EnemyArrow)
+        {
+            AddValues(speed, damage, (PlayerController.Instance.transform.position - transform.position).normalized, collisionLayer);
+        }
     }
 }

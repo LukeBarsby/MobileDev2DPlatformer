@@ -16,6 +16,8 @@ public class SkellyArcher : Enemy
     [SerializeField] float _sightRange = default;
     [SerializeField] float _stoppingDistance = default;
     GameObject _target;
+    bool attacking;
+    Animate animate;
     #endregion
 
     #region UI
@@ -44,20 +46,25 @@ public class SkellyArcher : Enemy
         agent = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody2D>();
         circleCol = GetComponent<CircleCollider2D>();
-
+        animate = GetComponentInChildren<Animate>();
         if (FindObjectOfType<PlayerController>() != null)
         {
             target = FindObjectOfType<PlayerController>().gameObject;
         }
+
+
     }
 
     private void Update()
     {
         _slider.value = currentHealth / 100;
+        attacking = isAttacking;
+        animate.SetAttacking(attacking);
     }
 
     public override void AttackTarget()
     {
+        agent.isStopped = true;
         if (timer <= 0)
         {
             FireArrow();

@@ -50,9 +50,9 @@ public class LocationSwitcher : MonoBehaviour
         casteArea.SetActive(false);
         castleUpperArea.SetActive(false);
         castleLowerArea.SetActive(false);
-        //bossRoomArea.SetActive(false);
+        bossRoomArea.SetActive(false);
 
-        //PlayerController.Instance.transform.position = OutsideSpawnPoint.transform.position;
+        PlayerController.Instance.transform.position = OutsideSpawnPoint.transform.position;
     }
 
 
