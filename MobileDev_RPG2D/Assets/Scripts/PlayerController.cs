@@ -169,36 +169,56 @@ public class PlayerController : Singleton<PlayerController>
 
         hasMeleeWeapon = false;
         meleeAttacking = true;
-
+        SetIdle();
     }
 
     private void UseItem(Item item)
     {
         switch (item.itemType)
         {
-            case Item.ItemType.Sword:
+            case Item.ItemType.WoodSword:
                 EquipGear(swordSlot, item);
                 break;
-            case Item.ItemType.Shield:
+            case Item.ItemType.WoodShield:
                 EquipGear(shieldSlot, item);
                 break;
-            case Item.ItemType.Bow:
+            case Item.ItemType.WoodBow:
                 EquipGear(bowSlot, item);
                 break;
-            case Item.ItemType.HealthPotion:
-                
+            case Item.ItemType.IronSword:
+                EquipGear(swordSlot, item);
                 break;
-            case Item.ItemType.Helmet:
+            case Item.ItemType.IronShield:
+                EquipGear(shieldSlot, item);
+                break;
+            case Item.ItemType.IronBow:
+                EquipGear(bowSlot, item);
+                break;
+            case Item.ItemType.LeatherHelmet:
                 EquipGear(headSlot, item);
                 break;
-            case Item.ItemType.ChestPiece:
+            case Item.ItemType.LeatherChestPiece:
                 EquipGear(chestSlot, item);
                 break;
-            case Item.ItemType.Legs:
+            case Item.ItemType.LeatherLegs:
                 EquipGear(legsSlot, item);
                 break;
-            case Item.ItemType.Feet:
+            case Item.ItemType.LeatherFeet:
                 EquipGear(feetSlot, item);
+                break;    
+            case Item.ItemType.IronHelmet:
+                EquipGear(headSlot, item);
+                break;
+            case Item.ItemType.IronChestPiece:
+                EquipGear(chestSlot, item);
+                break;
+            case Item.ItemType.IronLegs:
+                EquipGear(legsSlot, item);
+                break;
+            case Item.ItemType.IronFeet:
+                EquipGear(feetSlot, item);
+                break;
+            case Item.ItemType.HealthPotion:
                 break;
             default:
                 break;
@@ -208,28 +228,46 @@ public class PlayerController : Singleton<PlayerController>
     {
         switch (item.itemType)
         {
-            case Item.ItemType.Sword:
+            case Item.ItemType.WoodSword:
                 UnequipGear(swordSlot, item);
                 break;
-            case Item.ItemType.Shield:
+            case Item.ItemType.WoodShield:
                 UnequipGear(shieldSlot, item);
                 break;
-            case Item.ItemType.Bow:
+            case Item.ItemType.WoodBow:
                 UnequipGear(bowSlot, item);
                 break;
-            case Item.ItemType.HealthPotion:
-
+            case Item.ItemType.IronSword:
+                UnequipGear(swordSlot, item);
                 break;
-            case Item.ItemType.Helmet:
+            case Item.ItemType.IronShield:
+                UnequipGear(shieldSlot, item);
+                break;
+            case Item.ItemType.IronBow:
+                UnequipGear(bowSlot, item);
+                break;
+            case Item.ItemType.LeatherHelmet:
                 UnequipGear(headSlot, item);
                 break;
-            case Item.ItemType.ChestPiece:
+            case Item.ItemType.LeatherChestPiece:
                 UnequipGear(chestSlot, item);
                 break;
-            case Item.ItemType.Legs:
+            case Item.ItemType.LeatherLegs:
                 UnequipGear(legsSlot, item);
                 break;
-            case Item.ItemType.Feet:
+            case Item.ItemType.LeatherFeet:
+                UnequipGear(feetSlot, item);
+                break;
+            case Item.ItemType.IronHelmet:
+                UnequipGear(headSlot, item);
+                break;
+            case Item.ItemType.IronChestPiece:
+                UnequipGear(chestSlot, item);
+                break;
+            case Item.ItemType.IronLegs:
+                UnequipGear(legsSlot, item);
+                break;
+            case Item.ItemType.IronFeet:
                 UnequipGear(feetSlot, item);
                 break;
             default:
@@ -256,7 +294,8 @@ public class PlayerController : Singleton<PlayerController>
     {
         switch (item.itemType)
         {
-            case Item.ItemType.Sword:
+            case Item.ItemType.WoodSword:
+            case Item.ItemType.IronSword:
                 if (swordSlot.GetComponent<EquipedItem>().m_Item != null)
                 {
                     hasMeleeWeapon = true;
@@ -268,7 +307,8 @@ public class PlayerController : Singleton<PlayerController>
                     hasMeleeWeapon = false;
                 }
                 break;
-            case Item.ItemType.Shield:
+            case Item.ItemType.WoodShield:
+            case Item.ItemType.IronShield:
                 if (shieldSlot.GetComponent<EquipedItem>().m_Item != null)
                 {
                     hasShield = true;
@@ -279,7 +319,8 @@ public class PlayerController : Singleton<PlayerController>
                     hasShield = false;
                 }
                 break;
-            case Item.ItemType.Bow:
+            case Item.ItemType.WoodBow:
+            case Item.ItemType.IronBow:
                 if (bowSlot.GetComponent<EquipedItem>().m_Item != null)
                 {
                     hasBowWeapon = true;
@@ -293,19 +334,23 @@ public class PlayerController : Singleton<PlayerController>
                 break;
             case Item.ItemType.HealthPotion:
                 break;
-            case Item.ItemType.Helmet:
+            case Item.ItemType.LeatherHelmet:
+            case Item.ItemType.IronHelmet:
                 headAnimator.SetBool("hasHeadArmour", hasGear);
                 headSpriteRenderer.material = mat;
                 break;
-            case Item.ItemType.ChestPiece:
+            case Item.ItemType.LeatherChestPiece:
+            case Item.ItemType.IronChestPiece:
                 bodyAnimator.SetBool("hasBodyArmour", hasGear);
                 chestSpriteRenderer.material = mat;
                 break;
-            case Item.ItemType.Legs:
+            case Item.ItemType.LeatherLegs:
+            case Item.ItemType.IronLegs:
                 legsAnimator.SetBool("hasLegArmour", hasGear);
                 legsSpriteRenderer.material = mat;
                 break;
-            case Item.ItemType.Feet:
+            case Item.ItemType.LeatherFeet:
+            case Item.ItemType.IronFeet:
                 feetAnimator.SetBool("hasFeetArmour", hasGear);
                 feetSpriteRenderer.material = mat;
                 break;
@@ -330,10 +375,13 @@ public class PlayerController : Singleton<PlayerController>
 
     private void FixedUpdate()
     {
-        Movement();
-        Attack();
-        Block();
-        Anim();
+        if (!invenOpen)
+        {
+            Movement();
+            Attack();
+            Block();
+            Anim();
+        }
     }
 
 
@@ -433,8 +481,8 @@ public class PlayerController : Singleton<PlayerController>
                 {
                     speed = orignalSpeed;
                 }
-                attackTimer -= Time.deltaTime;
             }
+            attackTimer -= Time.deltaTime;
         }
 
         else if (meleeAttacking)
@@ -446,15 +494,33 @@ public class PlayerController : Singleton<PlayerController>
                     swordSlot.SetActive(true);
                     speed = combatSpeed;
 
-                    if (closestEnemy.GetComponent<Enemy>() != null && attackTimer <= 0)
+                    if (closestEnemy.GetComponent<Enemy>() != null)
                     {
                         if (!swordAnimator.GetCurrentAnimatorStateInfo(0).IsName("SwordBlend"))
                         {
                             swordAnimator.PlayInFixedTime("SwordBlend");
+                            attackTimer += meleeAttackRate / 2;
                         }
-                        closestEnemy.GetComponent<Enemy>().TakeDamage(meleeDamage);
-                        attackTimer = 0;
-                        attackTimer = meleeAttackRate;
+                        if (attackTimer <= 0)
+                        {
+                            closestEnemy.GetComponent<Enemy>().TakeDamage(meleeDamage);
+                            attackTimer = 0;
+                            attackTimer = meleeAttackRate;
+                        }
+                    }
+                    else if (closestEnemy.GetComponent<VarseController>() != null)
+                    {
+                        if (!swordAnimator.GetCurrentAnimatorStateInfo(0).IsName("SwordBlend"))
+                        {
+                            swordAnimator.PlayInFixedTime("SwordBlend");
+                            attackTimer += meleeAttackRate / 2;
+                        }
+                        if (attackTimer <= 0)
+                        {
+                            closestEnemy.GetComponent<VarseController>().TakeDamage();
+                            attackTimer = 0;
+                            attackTimer = meleeAttackRate;
+                        }
                     }
                 }
                 speed = orignalSpeed;
@@ -545,7 +611,6 @@ public class PlayerController : Singleton<PlayerController>
             swordSlot.SetActive(false);
             bowSlot.SetActive(true);
         }
-        Debug.Log("melee = ture, Ramged = false : " + meleeAttacking);
     }
 
     public void SpecialAttack()
@@ -639,13 +704,7 @@ public class PlayerController : Singleton<PlayerController>
             feetAnimator.SetFloat("y", movement.y);
 
 
-            headAnimator.SetBool("isMoving", true);
-
-            bodyAnimator.SetBool("isMoving", true);
-
-            legsAnimator.SetBool("isMoving", true);
-
-            feetAnimator.SetBool("isMoving", true);
+            SetMoveing(true);
 
             timer = 0;
             timer += dragTime;
@@ -653,21 +712,29 @@ public class PlayerController : Singleton<PlayerController>
         else if (timer > 0)
         {
             rb.velocity = movement * (speed / 2);
+            SetIdle();
         }
         else if (timer <= 0)
         {
             rb.velocity = Vector2.zero;
 
-            headAnimator.SetBool("isMoving", false);
-            headAnimator.Play("IdleHead");
-            bodyAnimator.SetBool("isMoving", false);
-            bodyAnimator.Play("IdleChest");
-            legsAnimator.SetBool("isMoving", false);
-            legsAnimator.Play("IdleLegs");
-            feetAnimator.SetBool("isMoving", false);
-            feetAnimator.Play("IdleFeet");
+            SetMoveing(false);
         }
         timer -= Time.deltaTime;
+    }
+    void SetIdle()
+    {
+        headAnimator.Play("SetIdleHead");
+        bodyAnimator.Play("SetIdleChest");
+        legsAnimator.Play("SetIdleLegs");
+        feetAnimator.Play("SetIdleFeet");
+    }
+    void SetMoveing(bool b)
+    {
+        headAnimator.SetBool("isMoving", b);
+        bodyAnimator.SetBool("isMoving", b);
+        legsAnimator.SetBool("isMoving", b);
+        feetAnimator.SetBool("isMoving", b);
     }
 
     public void OpenInven()
@@ -686,7 +753,7 @@ public class PlayerController : Singleton<PlayerController>
 
     public void OpenChestUI(Item p_item, GameObject p_chest)
     {
-        chestUiOpen = !chestUiOpen;
+        chestUiOpen =! chestUiOpen;
         if (chestUiOpen)
         {
             item = p_item;
@@ -700,6 +767,7 @@ public class PlayerController : Singleton<PlayerController>
     }
     public void CloseChestOpen()
     {
+        chestUiOpen = false;
         ChestOpenPanel.SetActive(false);
     }
 
@@ -711,8 +779,6 @@ public class PlayerController : Singleton<PlayerController>
 
     public void CloseChestItemScreen()
     {
-        item = null;
-        chest = null;
         ChestInventoryPanel.SetActive(false);
     }
 }

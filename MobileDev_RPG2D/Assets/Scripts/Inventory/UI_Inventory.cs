@@ -16,7 +16,7 @@ public class UI_Inventory : MonoBehaviour
     [SerializeField] GameObject popupWindow = default;
     //Popup Inventory Remove Item
     [SerializeField] GameObject popUpRemoveWindow = default;
-    //Item Equipment
+    [Header("Navas Images")]
     [SerializeField] Image helmetImage = default;
     [SerializeField] Image chestImage = default;
     [SerializeField] Image legsImage = default;
@@ -29,7 +29,11 @@ public class UI_Inventory : MonoBehaviour
     [SerializeField] Material blankMat = default;
     [SerializeField] Sprite blankSprite = default;
 
-
+    void OnDisable()
+    {
+        popupWindow.SetActive(false);
+        popUpRemoveWindow.SetActive(false);
+    }
 
     public void SetInventory(Inventory inventory)
     {
@@ -90,7 +94,6 @@ public class UI_Inventory : MonoBehaviour
         {
             popUpRemoveWindow.SetActive(true);
             Item tempItem = button.GetComponentInParent<ItemIdentifier>().ReturnItem();
-            Debug.Log(tempItem.itemType);
             popUpRemoveWindow.GetComponent<UI_RemoveItem>().SetItem(tempItem, m_inventory);
         }
     }
@@ -99,30 +102,57 @@ public class UI_Inventory : MonoBehaviour
     {
         switch (item.itemType)
         {
-            case Item.ItemType.Sword:
+            case Item.ItemType.WoodSword:
                 swordImage.sprite = item.GetSprite();
                 swordImage.GetComponentInParent<ItemIdentifier>().SetItem(item);
                 break;
-            case Item.ItemType.Shield:
+            case Item.ItemType.IronSword:
+                swordImage.sprite = item.GetSprite();
+                swordImage.GetComponentInParent<ItemIdentifier>().SetItem(item);
+                break;
+            case Item.ItemType.WoodShield:
                 shieldImage.sprite = item.GetSprite();
                 break;
-            case Item.ItemType.Bow:
+            case Item.ItemType.IronShield:
+                shieldImage.sprite = item.GetSprite();
+                break;
+            case Item.ItemType.WoodBow:
                 bowImage.sprite = item.GetSprite();
                 bowImage.GetComponentInParent<ItemIdentifier>().SetItem(item);
                 break;
-            case Item.ItemType.Helmet:
+            case Item.ItemType.IronBow:
+                bowImage.sprite = item.GetSprite();
+                bowImage.GetComponentInParent<ItemIdentifier>().SetItem(item);
+                break;
+            case Item.ItemType.LeatherHelmet:
                 helmetImage.sprite = item.GetSprite();
                 helmetImage.GetComponentInParent<ItemIdentifier>().SetItem(item);
                 break;
-            case Item.ItemType.ChestPiece:
+            case Item.ItemType.IronHelmet:
+                helmetImage.sprite = item.GetSprite();
+                helmetImage.GetComponentInParent<ItemIdentifier>().SetItem(item);
+                break;
+            case Item.ItemType.LeatherChestPiece:
                 chestImage.sprite = item.GetSprite();
                 chestImage.GetComponentInParent<ItemIdentifier>().SetItem(item);
                 break;
-            case Item.ItemType.Legs:
+            case Item.ItemType.IronChestPiece:
+                chestImage.sprite = item.GetSprite();
+                chestImage.GetComponentInParent<ItemIdentifier>().SetItem(item);
+                break;
+            case Item.ItemType.LeatherLegs:
                 legsImage.sprite = item.GetSprite();
                 legsImage.GetComponentInParent<ItemIdentifier>().SetItem(item);
                 break;
-            case Item.ItemType.Feet:
+            case Item.ItemType.IronLegs:
+                legsImage.sprite = item.GetSprite();
+                legsImage.GetComponentInParent<ItemIdentifier>().SetItem(item);
+                break;
+            case Item.ItemType.LeatherFeet:
+                feetImage.sprite = item.GetSprite();
+                feetImage.GetComponentInParent<ItemIdentifier>().SetItem(item);
+                break;
+            case Item.ItemType.IronFeet:
                 feetImage.sprite = item.GetSprite();
                 feetImage.GetComponentInParent<ItemIdentifier>().SetItem(item);
                 break;
@@ -134,31 +164,59 @@ public class UI_Inventory : MonoBehaviour
     {
         switch (item.itemType)
         {
-            case Item.ItemType.Sword:
+            case Item.ItemType.WoodSword:
                 swordImage.sprite = blankSprite;
                 swordImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
-            case Item.ItemType.Shield:
+            case Item.ItemType.IronSword:
+                swordImage.sprite = blankSprite;
+                swordImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
+                break;
+            case Item.ItemType.WoodShield:
                 swordImage.sprite = blankSprite;
                 shieldImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
-            case Item.ItemType.Bow:
+            case Item.ItemType.IronShield:
+                swordImage.sprite = blankSprite;
+                shieldImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
+                break;
+            case Item.ItemType.WoodBow:
                 swordImage.sprite = blankSprite;
                 bowImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
-            case Item.ItemType.Helmet:
+            case Item.ItemType.IronBow:
+                swordImage.sprite = blankSprite;
+                bowImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
+                break;
+            case Item.ItemType.LeatherHelmet:
                 swordImage.sprite = blankSprite;
                 helmetImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
-            case Item.ItemType.ChestPiece:
+            case Item.ItemType.IronHelmet:
+                swordImage.sprite = blankSprite;
+                helmetImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
+                break;
+            case Item.ItemType.LeatherChestPiece:
                 swordImage.sprite = blankSprite;
                 chestImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
-            case Item.ItemType.Legs:
+            case Item.ItemType.IronChestPiece:
+                swordImage.sprite = blankSprite;
+                chestImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
+                break;
+            case Item.ItemType.LeatherLegs:
                 swordImage.sprite = blankSprite;
                 legsImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
-            case Item.ItemType.Feet:
+            case Item.ItemType.IronLegs:
+                swordImage.sprite = blankSprite;
+                legsImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
+                break;
+            case Item.ItemType.LeatherFeet:
+                swordImage.sprite = blankSprite;
+                feetImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
+                break;
+            case Item.ItemType.IronFeet:
                 swordImage.sprite = blankSprite;
                 feetImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;

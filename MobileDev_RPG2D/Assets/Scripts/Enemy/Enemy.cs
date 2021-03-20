@@ -156,7 +156,7 @@ public abstract class Enemy : MonoBehaviour
 
 
 
-    public void TakeDamage(float meleeDamage)
+    public virtual void TakeDamage(float meleeDamage)
     {
         spriteRenderer.material = hitMaterial;
         hit = true;

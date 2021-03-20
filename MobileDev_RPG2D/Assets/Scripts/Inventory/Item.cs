@@ -7,15 +7,22 @@ public class Item
 {
     public enum ItemType
     {
-        Sword, 
-        Shield,
-        Bow,
+        WoodSword, 
+        WoodShield,
+        WoodBow,
+        IronSword,
+        IronShield,
+        IronBow,
+        LeatherHelmet,
+        LeatherChestPiece,
+        LeatherLegs,
+        LeatherFeet,
+        IronHelmet,
+        IronChestPiece,
+        IronLegs,
+        IronFeet,
         HealthPotion,
         Gold,
-        Helmet,
-        ChestPiece,
-        Legs,
-        Feet
     }
     // Generic
     public ItemType itemType;
@@ -35,26 +42,40 @@ public class Item
     {
         switch (itemType)
         {
-            case ItemType.Sword:
-                return ItemAssets.Instance.sword;
-            case ItemType.Shield:
-                return ItemAssets.Instance.shield;
-            case ItemType.Bow:
-                return ItemAssets.Instance.bow;
+            case ItemType.WoodSword:
+                return ItemAssets.Instance.woodSword;
+            case ItemType.WoodShield:
+                return ItemAssets.Instance.woodShield;
+            case ItemType.WoodBow:
+                return ItemAssets.Instance.woodBow;
+            case ItemType.IronSword:
+                return ItemAssets.Instance.ironSword;
+            case ItemType.IronShield:
+                return ItemAssets.Instance.ironShield;
+            case ItemType.IronBow:
+                return ItemAssets.Instance.ironBow;
+            case ItemType.LeatherHelmet:
+                return ItemAssets.Instance.leatherHelmet;
+            case ItemType.LeatherChestPiece:
+                return ItemAssets.Instance.leatherChestPeice;
+            case ItemType.LeatherLegs:
+                return ItemAssets.Instance.leatherLegArmour;
+            case ItemType.LeatherFeet:
+                return ItemAssets.Instance.leatherFeetArmour;
+            case ItemType.IronHelmet:
+                return ItemAssets.Instance.ironHelmet;
+            case ItemType.IronChestPiece:
+                return ItemAssets.Instance.ironChestPeice;
+            case ItemType.IronLegs:
+                return ItemAssets.Instance.ironLegArmour;
+            case ItemType.IronFeet:
+                return ItemAssets.Instance.ironFeetArmour;
             case ItemType.HealthPotion:
                 return ItemAssets.Instance.healthPotion;
             case ItemType.Gold:
                 return ItemAssets.Instance.gold;
-            case ItemType.Helmet:
-                return ItemAssets.Instance.helmet;
-            case ItemType.ChestPiece:
-                return ItemAssets.Instance.chestPeice;
-            case ItemType.Legs:
-                return ItemAssets.Instance.legArmour;
-            case ItemType.Feet:
-                return ItemAssets.Instance.feetArmour;
             default:
-                return ItemAssets.Instance.sword;
+                return ItemAssets.Instance.woodSword;
         }
     }
     public bool IsStackable()
@@ -64,13 +85,20 @@ public class Item
             case ItemType.Gold:
             case ItemType.HealthPotion:
                 return true;
-            case ItemType.Sword:
-            case ItemType.Shield:
-            case ItemType.Bow:
-            case ItemType.Helmet:
-            case ItemType.ChestPiece:
-            case ItemType.Legs:
-            case ItemType.Feet:
+            case ItemType.WoodSword:
+            case ItemType.IronSword:
+            case ItemType.WoodShield:
+            case ItemType.IronShield:
+            case ItemType.WoodBow:
+            case ItemType.IronBow:
+            case ItemType.LeatherHelmet:
+            case ItemType.LeatherChestPiece:
+            case ItemType.LeatherLegs:
+            case ItemType.LeatherFeet:
+            case ItemType.IronHelmet:
+            case ItemType.IronChestPiece:
+            case ItemType.IronLegs:
+            case ItemType.IronFeet:
                 return false;
             default:
                 return false;
@@ -83,13 +111,20 @@ public class Item
             case ItemType.Gold:
                 return false;
             case ItemType.HealthPotion:
-            case ItemType.Sword:
-            case ItemType.Shield:
-            case ItemType.Bow:
-            case ItemType.Helmet:
-            case ItemType.ChestPiece:
-            case ItemType.Legs:
-            case ItemType.Feet:
+            case ItemType.WoodSword:
+            case ItemType.IronSword:
+            case ItemType.WoodShield:
+            case ItemType.IronShield:
+            case ItemType.WoodBow:
+            case ItemType.IronBow:
+            case ItemType.LeatherHelmet:
+            case ItemType.LeatherChestPiece:
+            case ItemType.LeatherLegs:
+            case ItemType.LeatherFeet:
+            case ItemType.IronHelmet:
+            case ItemType.IronChestPiece:
+            case ItemType.IronLegs:
+            case ItemType.IronFeet:
                 return true;
             default:
                 return false;

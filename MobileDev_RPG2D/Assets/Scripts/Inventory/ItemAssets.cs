@@ -5,18 +5,25 @@ using UnityEngine;
 public class ItemAssets : Singleton<ItemAssets>
 {
     public Transform worldItem;
+    [Header("Weapons")]
+    [SerializeField] public Sprite woodSword;
+    [SerializeField] public Sprite woodShield;
+    [SerializeField] public Sprite woodBow;
+    [SerializeField] public Sprite ironSword;
+    [SerializeField] public Sprite ironShield;
+    [SerializeField] public Sprite ironBow;
 
-    [SerializeField] public Sprite sword;
-    [SerializeField] public Sprite shield;
-    [SerializeField] public Sprite bow;
+    [Header("Armour")]
+    [SerializeField] public Sprite leatherHelmet;
+    [SerializeField] public Sprite leatherChestPeice;
+    [SerializeField] public Sprite leatherLegArmour;
+    [SerializeField] public Sprite leatherFeetArmour;
+    [SerializeField] public Sprite ironHelmet;
+    [SerializeField] public Sprite ironChestPeice;
+    [SerializeField] public Sprite ironLegArmour;
+    [SerializeField] public Sprite ironFeetArmour;
 
-    [SerializeField] public Sprite helmet;
-    [SerializeField] public Sprite chestPeice;
-    [SerializeField] public Sprite legArmour;
-    [SerializeField] public Sprite feetArmour;
-
+    [Header("Items")]
     [SerializeField] public Sprite healthPotion;
-    [SerializeField] public Sprite healthFlask;
-    [SerializeField] public Sprite specialPotion;
     [SerializeField] public Sprite gold;
 }

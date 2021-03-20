@@ -17,6 +17,7 @@ public class ChestItemScript : MonoBehaviour
         this.item = item;
         this.inventory = iven;
         this.chest = chest;
+        chest.GetComponent<Chest>().OpenChest();
         spriteImage.sprite = item.GetSprite();
         itemName.text = item.itemType.ToString();
         itemDisc.text = item.itemType.ToString();
@@ -24,14 +25,15 @@ public class ChestItemScript : MonoBehaviour
 
     public void CloseWindow()
     {
-        this.item = null;
         gameObject.SetActive(false);
     }
     public void TakeItem()
     {
         inventory.AddItem(item);
-        chest.GetComponent<Chest>().ItembeenTaken = true;
-        PlayerController.Instance.CloseChestOpen();
+        chest.GetComponent<Chest>().TakeItem();
         CloseWindow();
+        PlayerController.Instance.CloseChestOpen();
+        this.item = null;
+        this.chest = null;
     }
 }
