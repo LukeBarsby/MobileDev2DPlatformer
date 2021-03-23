@@ -51,7 +51,7 @@ public class Slime : Enemy
 
     private void Update()
     {
-        _slider.value = currentHealth / 100;
+        _slider.value = currentHealth / maxHealth;
         attacking = isAttacking;
         animate.SetAttacking(attacking);
     }

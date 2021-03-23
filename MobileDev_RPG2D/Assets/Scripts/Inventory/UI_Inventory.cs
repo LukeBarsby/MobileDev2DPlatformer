@@ -31,8 +31,14 @@ public class UI_Inventory : MonoBehaviour
 
     void OnDisable()
     {
-        popupWindow.SetActive(false);
-        popUpRemoveWindow.SetActive(false);
+        if (popupWindow.activeInHierarchy)
+        {
+            popupWindow.SetActive(false);
+        }
+        if (popUpRemoveWindow.activeInHierarchy)
+        {
+            popUpRemoveWindow.SetActive(false);
+        }
     }
 
     public void SetInventory(Inventory inventory)
@@ -112,9 +118,11 @@ public class UI_Inventory : MonoBehaviour
                 break;
             case Item.ItemType.WoodShield:
                 shieldImage.sprite = item.GetSprite();
+                shieldImage.GetComponentInParent<ItemIdentifier>().SetItem(item);
                 break;
             case Item.ItemType.IronShield:
                 shieldImage.sprite = item.GetSprite();
+                shieldImage.GetComponentInParent<ItemIdentifier>().SetItem(item);
                 break;
             case Item.ItemType.WoodBow:
                 bowImage.sprite = item.GetSprite();
@@ -173,51 +181,51 @@ public class UI_Inventory : MonoBehaviour
                 swordImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
             case Item.ItemType.WoodShield:
-                swordImage.sprite = blankSprite;
+                shieldImage.sprite = blankSprite;
                 shieldImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
             case Item.ItemType.IronShield:
-                swordImage.sprite = blankSprite;
+                shieldImage.sprite = blankSprite;
                 shieldImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
             case Item.ItemType.WoodBow:
-                swordImage.sprite = blankSprite;
+                bowImage.sprite = blankSprite;
                 bowImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
             case Item.ItemType.IronBow:
-                swordImage.sprite = blankSprite;
+                bowImage.sprite = blankSprite;
                 bowImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
             case Item.ItemType.LeatherHelmet:
-                swordImage.sprite = blankSprite;
+                helmetImage.sprite = blankSprite;
                 helmetImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
             case Item.ItemType.IronHelmet:
-                swordImage.sprite = blankSprite;
+                helmetImage.sprite = blankSprite;
                 helmetImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
             case Item.ItemType.LeatherChestPiece:
-                swordImage.sprite = blankSprite;
+                chestImage.sprite = blankSprite;
                 chestImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
             case Item.ItemType.IronChestPiece:
-                swordImage.sprite = blankSprite;
+                chestImage.sprite = blankSprite;
                 chestImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
             case Item.ItemType.LeatherLegs:
-                swordImage.sprite = blankSprite;
+                legsImage.sprite = blankSprite;
                 legsImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
             case Item.ItemType.IronLegs:
-                swordImage.sprite = blankSprite;
+                legsImage.sprite = blankSprite;
                 legsImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
             case Item.ItemType.LeatherFeet:
-                swordImage.sprite = blankSprite;
+                feetImage.sprite = blankSprite;
                 feetImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
             case Item.ItemType.IronFeet:
-                swordImage.sprite = blankSprite;
+                feetImage.sprite = blankSprite;
                 feetImage.GetComponentInParent<ItemIdentifier>().RemoveItem();
                 break;
             default:

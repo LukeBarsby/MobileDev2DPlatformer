@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 235945919121766464}
   - component: {fileID: 171950872}
   - component: {fileID: 1753109560}
+  - component: {fileID: -2437595238234590219}
   m_Layer: 9
   m_Name: Slime
   m_TagString: Enemy
@@ -116,6 +117,19 @@ NavMeshAgent:
   m_BaseOffset: 0.34
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-2437595238234590219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235945919121766465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34eb0864cb077aa44bde39c43b4084d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: 0
 --- !u!1 &5880054267383315214
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +211,7 @@ SpriteRenderer:
   m_Size: {x: 0.875, y: 0.6875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &250714622
@@ -231,6 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4fa020f6213bc645b7ebcee7a9be8a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasAttackAnim: 0
 --- !u!1001 &4701190664063608765
 PrefabInstance:
   m_ObjectHideFlags: 0

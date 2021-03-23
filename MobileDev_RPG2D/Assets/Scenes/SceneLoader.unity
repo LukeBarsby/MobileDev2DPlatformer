@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1306926546}
   - component: {fileID: 1306926547}
+  - component: {fileID: 1306926548}
   m_Layer: 0
   m_Name: SceneLoader
   m_TagString: Untagged
@@ -148,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306926545}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.170464, y: 51.93036, z: -2.513526}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -163,6 +164,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1306926545}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d1a6cc108645314b8890cb813db86f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 21bbd291e8c63d341970e89564167b85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1306926548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306926545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ae59b37bbc5694f946b5fa5a7e1aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

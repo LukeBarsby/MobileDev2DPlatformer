@@ -40,12 +40,15 @@ public class LocationSwitcher : MonoBehaviour
     [SerializeField] GameObject CastleLowerSpawnPoint2 = default;
     //boss room
     [SerializeField] GameObject BossRoomSpawnPoint = default;
+    [SerializeField] GameObject BossRoomExitPoint = default;
 
 
 
 
     void Start()
     {
+        PlayerController.Instance.EnableUI();
+
         outsideArea.SetActive(true);
         casteArea.SetActive(false);
         castleUpperArea.SetActive(false);
@@ -127,6 +130,7 @@ public class LocationSwitcher : MonoBehaviour
             case "CastleLowerEnterBoss":
                 bossRoomArea.SetActive(true);
                 castleLowerArea.SetActive(false);
+                BossRoomExitPoint.SetActive(false);
                 PlayerController.Instance.transform.position = BossRoomSpawnPoint.transform.position;
                 break;
             //Boss room
@@ -139,5 +143,10 @@ public class LocationSwitcher : MonoBehaviour
                 Debug.Log("incorrect spelling from enter points");
                 break;
         }
+    }
+
+    public void EnableExit()
+    {
+        BossRoomExitPoint.SetActive(true);
     }
 }

@@ -15,6 +15,7 @@ public class Wizard : StateMachine
     [SerializeField] public float _idleMaxDistnce = default;
     [SerializeField] float _attackSpeed = default;
     GameObject _target;
+    float currentHealth;
     #endregion
 
     #region UI
@@ -49,11 +50,13 @@ public class Wizard : StateMachine
     [SerializeField] public Transform bossSpawn = default;
     [HideInInspector] public float rushPointCounter = 0;
     public bool returnedToSpawnPos;
-    
+
     #endregion
+    [HideInInspector] public LocationSwitcher ls;
 
     void Start()
     {
+        ls = FindObjectOfType<LocationSwitcher>();
         spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
         agent = transform.parent.GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody2D>();
@@ -69,7 +72,7 @@ public class Wizard : StateMachine
         //turn off spinny laser
         GreenLaserSpin.SetActive(false);
         returnedToSpawnPos = false;
-
+        currentHealth = _maxHealth;
 
         SetState(new wRandomMove(this));
     }
@@ -77,7 +80,7 @@ public class Wizard : StateMachine
     void Update()
     {
         UpdateState();
-
+        _slider.value = currentHealth / _maxHealth;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -97,5 +100,19 @@ public class Wizard : StateMachine
         {
             returnedToSpawnPos = false;
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+    public void Die()
+    {
+        gameObject.SetActive(false);
+        SetState(new wEndState(this));
     }
 }

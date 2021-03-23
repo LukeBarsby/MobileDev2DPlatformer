@@ -176,3 +176,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &487435736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 487435738}
+  - component: {fileID: 487435737}
+  m_Layer: 0
+  m_Name: ItemAssets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &487435737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487435736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72dba6f210d6f1e41b280874b533bdd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldItem: {fileID: 5392723481778824280, guid: 859a9279495c3bb49b2fa482b82935af, type: 3}
+  woodSword: {fileID: 21300000, guid: 640ff3ffb0a41a84d813a0ca07ea6a14, type: 3}
+  woodShield: {fileID: 21300000, guid: a34f1b5e435f8724c9a663378584e1f7, type: 3}
+  woodBow: {fileID: 21300000, guid: 3ccd775ce569e4b43910174be2761cea, type: 3}
+  ironSword: {fileID: 21300000, guid: ae94a1a53df30f2489efa86f051bd228, type: 3}
+  ironShield: {fileID: 21300000, guid: 43ee78c8646923648801cc21864e0e1a, type: 3}
+  ironBow: {fileID: 21300000, guid: ef13afe5b9501164da313078f3acdd21, type: 3}
+  leatherHelmet: {fileID: 21300000, guid: 7d78df4ccdce071409e974c35aee5010, type: 3}
+  leatherChestPeice: {fileID: 21300000, guid: d6fdf5920ec20c74f86e23d68087965e, type: 3}
+  leatherLegArmour: {fileID: 21300000, guid: c4fd2cc9d0830104893b6a05b38578b7, type: 3}
+  leatherFeetArmour: {fileID: 21300000, guid: f2244cbb301184b4db8a976fa0cb542c, type: 3}
+  ironHelmet: {fileID: 21300000, guid: 1018240f948f5d9438efd55d3afcff9f, type: 3}
+  ironChestPeice: {fileID: 21300000, guid: bc9fbf7a946444149b0a68e7e710f730, type: 3}
+  ironLegArmour: {fileID: 21300000, guid: b53d10a9aeb21a44bbf86ee96a5691de, type: 3}
+  ironFeetArmour: {fileID: 21300000, guid: 01df42637b7ba2a48b224729213ebfb0, type: 3}
+  healthPotion: {fileID: 21300000, guid: e906fbc0973f40b4197d6152e0fc4904, type: 3}
+  gold: {fileID: 21300000, guid: 4a940435e14f06c498d40bf3c1485c76, type: 3}
+  woodMaterial: {fileID: 2100000, guid: 7e6b086d67fc60249b6c4eeaf6c6e63e, type: 2}
+  ironMaterial: {fileID: 2100000, guid: fc5b282e864760449aeb53090221e220, type: 2}
+  goldMaterial: {fileID: 2100000, guid: 4a380fc82fc052e459d2db5f7834b791, type: 2}
+  leatherMaterial: {fileID: 2100000, guid: 630ae5a963f7fa0438865b6c704f3541, type: 2}
+--- !u!4 &487435738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487435736}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.07859238, y: 0.29659027, z: -1.2774554}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

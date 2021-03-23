@@ -26,4 +26,11 @@ public class ItemAssets : Singleton<ItemAssets>
     [Header("Items")]
     [SerializeField] public Sprite healthPotion;
     [SerializeField] public Sprite gold;
+
+    [Header("Materials")]
+    [SerializeField] public Material woodMaterial;
+    [SerializeField] public Material ironMaterial;
+    [SerializeField] public Material goldMaterial;
+    [SerializeField] public Material leatherMaterial;
+
 }

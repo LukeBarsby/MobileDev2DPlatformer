@@ -13,11 +13,13 @@ public class wEndState : State
         Debug.Log("scream");
         Debug.Log("UI screen to exit manually or return to menu");
         Debug.Log("dead sprite");
+        wizardObj.ls.EnableExit();
+        PlayerController.Instance.OpenReturnMenu();
     }
 
     public override void Update()
     {
-        base.Update();
+        
     }
 
     public override void End()

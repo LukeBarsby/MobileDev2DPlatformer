@@ -59,4 +59,10 @@ public class Inventory
     {
         return itemList;
     }
+
+    public int InventorySize()
+    {
+        int size = itemList.Count;
+        return size;
+    }
 }

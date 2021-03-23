@@ -26,9 +26,10 @@ public class VarseController : MonoBehaviour
         }
     }
 
-    public void TakeDamage()
+    public void TakeDamage(float damage)
     {
         anim.Play("varseBroken");
+        transform.tag = "Untagged"
         breakPot = true;
     }
 }

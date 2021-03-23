@@ -68,35 +68,37 @@ public class ProjectileController : MonoBehaviour, IPooledObject
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        ResetObj();
         if (fireMode == ProjectileType.PlayerArrow)
         {
             if (collision.transform.tag == "Enemy")
             {
-                ResetObj();
-                collision.transform.GetComponent<Enemy>().TakeDamage(PlayerController.Instance.rangeDamage);
+                if (collision.transform.GetComponent<TakeDamageScript>() != null)
+                {
+                    collision.transform.GetComponent<TakeDamageScript>().TakeDamage(PlayerController.Instance.rangeDamage);
+                }
             }
         }
-        else if (fireMode != ProjectileType.PlayerArrow)
+        else if (fireMode == ProjectileType.EnemyArrow)
         {
             if (collision.transform.tag == "Player")
             {
-                ResetObj();
-                collision.transform.GetComponent<PlayerController>().TakeDamage(damage);
+                if (collision.transform.GetComponent<TakeDamageScript>() != null)
+                {
+                    collision.transform.GetComponent<TakeDamageScript>().TakeDamage(PlayerController.Instance.rangeDamage);
+                }
             }
         }
-        else
-        {
-            ResetObj();
-        }
+
 
     }
 
     void ResetObj()
     {
+        gameObject.SetActive(false);
         shoot = false;
         direction = Vector3.zero;
         rb.velocity = Vector3.zero;
-        gameObject.SetActive(false);
     }
 
     public void ShootFireBall()

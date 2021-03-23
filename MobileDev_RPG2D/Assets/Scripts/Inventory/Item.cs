@@ -24,6 +24,13 @@ public class Item
         HealthPotion,
         Gold,
     }
+    public enum Materials
+    {
+        Wood,
+        Iron,
+        Gold,
+        Leather
+    }
     // Generic
     public ItemType itemType;
     public int amount;
@@ -36,7 +43,7 @@ public class Item
     //armour
     public float defence;
     //generic equpment
-    public Material material;
+    public Materials material;
 
     public Sprite GetSprite()
     {
@@ -78,6 +85,24 @@ public class Item
                 return ItemAssets.Instance.woodSword;
         }
     }
+
+    public Material GetMaterial()
+    {
+        switch (material)
+        {
+            case Materials.Wood:
+                return ItemAssets.Instance.woodMaterial;
+            case Materials.Iron:
+                return ItemAssets.Instance.ironMaterial;
+            case Materials.Gold:
+                return ItemAssets.Instance.goldMaterial;
+            case Materials.Leather:
+                return ItemAssets.Instance.leatherMaterial;
+            default:
+                return ItemAssets.Instance.woodMaterial;
+        }
+    }
+
     public bool IsStackable()
     {
         switch (itemType)

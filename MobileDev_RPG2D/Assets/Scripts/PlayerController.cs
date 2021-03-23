@@ -22,6 +22,12 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] Slider healthBar;
     [SerializeField] Slider blockBar;
     [SerializeField] Slider specialBar;
+    [SerializeField] GameObject textBox;
+    [SerializeField] Text text;    
+    [SerializeField] GameObject returnToMenuPanel;
+    [SerializeField] GameObject UI;
+    bool settingsOpen;
+
     #endregion
 
     #region weapon / armour
@@ -78,7 +84,6 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] float maxHealth = default;
     [SerializeField] float meleeAttackRange = default;
     [SerializeField] float rangeAttackRange = default;
-    List<GameObject> enemyCount = new List<GameObject>();
     bool meleeAttacking;
     float currentHealth;
     [SerializeField] float dragTime = default;
@@ -105,9 +110,10 @@ public class PlayerController : Singleton<PlayerController>
     #region Attack stuff
     [SerializeField] CircleCollider2D attackRangeTrig = default;
     public GameObject closestEnemy = null;
+    public List<GameObject> closestEnemies = new List<GameObject>();
+    public List<GameObject> enemyCount = new List<GameObject>();
     bool attacking = false;
     float attackTimer;
-    [SerializeField] GameObject arrow = default;
     #endregion
 
     #region Movement Stuff
@@ -122,7 +128,7 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] GameObject InventoryGameObject = default;
     bool invenOpen = false;
     bool chestUiOpen = false;
-    Inventory inventory;
+    public Inventory inventory;
     [SerializeField] UI_Inventory uiInventory = default;
     [SerializeField] GameObject ChestInventoryPanel = default;
     [SerializeField] GameObject ChestOpenPanel = default;
@@ -134,10 +140,18 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] float laserDamage = default;
     #endregion
 
+    #region SavedData
+    public int goldCount;
+    #endregion
+
     void Awake()
     {
         rb   = GetComponent<Rigidbody2D>();
         cp   = GetComponent<CircleCollider2D>();
+    }
+
+    void Start()
+    {
 
         headAnimator = headSlot.GetComponent<Animator>();
         bodyAnimator = chestSlot.GetComponent<Animator>();
@@ -155,14 +169,13 @@ public class PlayerController : Singleton<PlayerController>
 
         swordSpriteRenderer = swordSlot.GetComponent<SpriteRenderer>();
         shieldSpriteRenderer = shieldSlot.GetComponent<SpriteRenderer>();
-        bowSpriteRenderer = legsSlot.GetComponent<SpriteRenderer>();
+        bowSpriteRenderer = bowSlot.GetComponent<SpriteRenderer>();
 
         inventory = new Inventory(UseItem, RemoveItem);
         uiInventory.SetInventory(inventory);
-    }
 
-    void Start()
-    {
+        DisableUI();
+
         currentHealth = maxHealth;
         healthBar.value = currentHealth / 100;
         orignalSpeed = speed;
@@ -170,8 +183,8 @@ public class PlayerController : Singleton<PlayerController>
         hasMeleeWeapon = false;
         meleeAttacking = true;
         SetIdle();
+        SavingSystem.Instance.LoadData();
     }
-
     private void UseItem(Item item)
     {
         switch (item.itemType)
@@ -277,10 +290,13 @@ public class PlayerController : Singleton<PlayerController>
 
     void EquipGear(GameObject slot, Item item)
     {
-        slot.GetComponent<EquipedItem>().SetItem(item);
-        uiInventory.SetEquipment(item);
+        if (slot.GetComponent<EquipedItem>().m_Item != item)
+        {
+            slot.GetComponent<EquipedItem>().SetItem(item);
+            uiInventory.SetEquipment(item);
 
-        GearCheck(item, item.material, true);
+            GearCheck(item, item.GetMaterial(), true);
+        }
     }
     void UnequipGear(GameObject slot, Item item)
     {
@@ -313,9 +329,11 @@ public class PlayerController : Singleton<PlayerController>
                 {
                     hasShield = true;
                     swordSpriteRenderer.material = mat;
+                    defenceBuff += item.defence;
                 }
                 else
                 {
+                    defenceBuff -= item.defence;
                     hasShield = false;
                 }
                 break;
@@ -338,21 +356,53 @@ public class PlayerController : Singleton<PlayerController>
             case Item.ItemType.IronHelmet:
                 headAnimator.SetBool("hasHeadArmour", hasGear);
                 headSpriteRenderer.material = mat;
+                if (headSlot.GetComponent<EquipedItem>().m_Item != null)
+                {
+                    defenceBuff += item.defence;
+                }
+                else
+                {
+                    defenceBuff -= item.defence;
+                }
                 break;
             case Item.ItemType.LeatherChestPiece:
             case Item.ItemType.IronChestPiece:
                 bodyAnimator.SetBool("hasBodyArmour", hasGear);
                 chestSpriteRenderer.material = mat;
+                if (chestSlot.GetComponent<EquipedItem>().m_Item != null)
+                {
+                    defenceBuff += item.defence;
+                }
+                else
+                {
+                    defenceBuff -= item.defence;
+                }
                 break;
             case Item.ItemType.LeatherLegs:
             case Item.ItemType.IronLegs:
                 legsAnimator.SetBool("hasLegArmour", hasGear);
                 legsSpriteRenderer.material = mat;
+                if (legsSlot.GetComponent<EquipedItem>().m_Item != null)
+                {
+                    defenceBuff += item.defence;
+                }
+                else
+                {
+                    defenceBuff -= item.defence;
+                }
                 break;
             case Item.ItemType.LeatherFeet:
             case Item.ItemType.IronFeet:
                 feetAnimator.SetBool("hasFeetArmour", hasGear);
                 feetSpriteRenderer.material = mat;
+                if (feetSlot.GetComponent<EquipedItem>().m_Item != null)
+                {
+                    defenceBuff += item.defence;
+                }
+                else
+                {
+                    defenceBuff -= item.defence;
+                }
                 break;
             default:
                 Debug.Log(item.itemType + "cant be found");
@@ -375,7 +425,7 @@ public class PlayerController : Singleton<PlayerController>
 
     private void FixedUpdate()
     {
-        if (!invenOpen)
+        if (!invenOpen && !settingsOpen)
         {
             Movement();
             Attack();
@@ -423,6 +473,7 @@ public class PlayerController : Singleton<PlayerController>
         }
         else if (!canBlock || Input.touchCount > 0)
         {
+            damage -= (damage / defenceBuff);
             currentHealth -= damage;
             if (currentHealth <= 0)
             {
@@ -430,10 +481,13 @@ public class PlayerController : Singleton<PlayerController>
             }
         }
     }
+
     public void TakeTicDamage(float damage)
     {
+        damage -= (damage / defenceBuff);
         currentHealth -= damage * Time.deltaTime;
     }
+
     void Die()
     {
         SceneManager.LoadScene(0);
@@ -452,7 +506,6 @@ public class PlayerController : Singleton<PlayerController>
         }
     }
 
-
     void Attack()
     {
         if (enemyCount.Count <= 0 && meleeAttacking)
@@ -466,15 +519,15 @@ public class PlayerController : Singleton<PlayerController>
             {
                 if (enemyCount.Count > 0)
                 {
-                    if (closestEnemy.GetComponent<Enemy>() != null && attackTimer <= 0)
+                    if (closestEnemy.GetComponent<TakeDamageScript>() != null && attackTimer <= 0)
                     {
                         if (!bowAnimator.GetCurrentAnimatorStateInfo(0).IsName("BowBlend"))
                         {
                             bowAnimator.PlayInFixedTime("BowBlend");
+                            FireArrow();
+                            attackTimer = 0;
+                            attackTimer = rangedAttackRate;
                         }
-                        FireArrow();
-                        attackTimer = 0;
-                        attackTimer = rangedAttackRate;
                     }
                 }
                 else
@@ -494,32 +547,21 @@ public class PlayerController : Singleton<PlayerController>
                     swordSlot.SetActive(true);
                     speed = combatSpeed;
 
-                    if (closestEnemy.GetComponent<Enemy>() != null)
+                    for (int i = 0; i < enemyCount.Count; i++)
                     {
-                        if (!swordAnimator.GetCurrentAnimatorStateInfo(0).IsName("SwordBlend"))
+                        if (enemyCount[i].GetComponent<TakeDamageScript>() != null)
                         {
-                            swordAnimator.PlayInFixedTime("SwordBlend");
-                            attackTimer += meleeAttackRate / 2;
-                        }
-                        if (attackTimer <= 0)
-                        {
-                            closestEnemy.GetComponent<Enemy>().TakeDamage(meleeDamage);
-                            attackTimer = 0;
-                            attackTimer = meleeAttackRate;
-                        }
-                    }
-                    else if (closestEnemy.GetComponent<VarseController>() != null)
-                    {
-                        if (!swordAnimator.GetCurrentAnimatorStateInfo(0).IsName("SwordBlend"))
-                        {
-                            swordAnimator.PlayInFixedTime("SwordBlend");
-                            attackTimer += meleeAttackRate / 2;
-                        }
-                        if (attackTimer <= 0)
-                        {
-                            closestEnemy.GetComponent<VarseController>().TakeDamage();
-                            attackTimer = 0;
-                            attackTimer = meleeAttackRate;
+                            if (!swordAnimator.GetCurrentAnimatorStateInfo(0).IsName("SwordBlend"))
+                            {
+                                swordAnimator.PlayInFixedTime("SwordBlend");
+                                attackTimer += meleeAttackRate / 2;
+                            }
+                            if (attackTimer <= 0)
+                            {
+                                enemyCount[i].GetComponent<TakeDamageScript>().TakeDamage(meleeDamage);
+                                attackTimer = 0;
+                                attackTimer = meleeAttackRate;
+                            }
                         }
                     }
                 }
@@ -554,6 +596,7 @@ public class PlayerController : Singleton<PlayerController>
         {
             return;
         }
+        #region old
         for (int i = 0; i < enemyCount.Count; i++)
         {
             GameObject testEnemy = enemyCount[i];
@@ -570,10 +613,11 @@ public class PlayerController : Singleton<PlayerController>
                 if (Vector2.Distance(transform.position, testEnemy.transform.position) < Vector2.Distance(transform.position, closestEnemy.transform.position))
                 {
                     closestEnemy = testEnemy;
-
                 }
             }
         }
+        #endregion
+
     }
 
     void UpdateRange()
@@ -722,6 +766,7 @@ public class PlayerController : Singleton<PlayerController>
         }
         timer -= Time.deltaTime;
     }
+
     void SetIdle()
     {
         headAnimator.Play("SetIdleHead");
@@ -729,6 +774,7 @@ public class PlayerController : Singleton<PlayerController>
         legsAnimator.Play("SetIdleLegs");
         feetAnimator.Play("SetIdleFeet");
     }
+
     void SetMoveing(bool b)
     {
         headAnimator.SetBool("isMoving", b);
@@ -765,6 +811,7 @@ public class PlayerController : Singleton<PlayerController>
             ChestOpenPanel.SetActive(false);
         }
     }
+
     public void CloseChestOpen()
     {
         chestUiOpen = false;
@@ -781,4 +828,63 @@ public class PlayerController : Singleton<PlayerController>
     {
         ChestInventoryPanel.SetActive(false);
     }
+
+    public void OpenDialogMenu(string text)
+    {
+        textBox.SetActive(true);
+        this.text.text = text;
+    }
+
+    public void CloseDialogMenu()
+    {
+        this.text.text = null;
+        textBox.SetActive(false);
+    }
+
+    public void GiveItem(Item item)
+    {
+        inventory.AddItem(item);
+    }
+
+    public void OpenReturnMenu()
+    {
+        settingsOpen = !settingsOpen;
+        if (settingsOpen)
+        {
+            returnToMenuPanel.SetActive(true);
+        }
+        else
+        {
+            returnToMenuPanel.SetActive(false);
+        }
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "ping");
+    }
+
+
+    public void ReturnToMenu()
+    {
+        SavingSystem.Instance.SaveData();
+        OpenReturnMenu();
+        DisableUI();
+        GameSceneManager.Instance.ReturnToMenu();
+
+    }
+
+    public void EnableUI()
+    {
+        UI.SetActive(true);
+        headSpriteRenderer.enabled = true;
+        chestSpriteRenderer.enabled = true;
+        legsSpriteRenderer.enabled = true;
+        feetSpriteRenderer.enabled = true;
+    }
+    public void DisableUI()
+    {
+        UI.SetActive(false);
+        headSpriteRenderer.enabled = false;
+        chestSpriteRenderer.enabled = false;
+        legsSpriteRenderer.enabled = false;
+        feetSpriteRenderer.enabled = false;
+    }
+
 }

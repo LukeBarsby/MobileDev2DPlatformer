@@ -50,8 +50,6 @@ public class WorldSelectScript : MonoBehaviour
         {
             if (scrollPos < pos[i] + (distance / 2) && scrollPos > pos[i] - (distance / 2))
             {
-                // get level by i);
-
                 transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(1, 1), 0.1f);
                 for (int j = 0; j < pos.Length; j++)
                 {
@@ -71,6 +69,33 @@ public class WorldSelectScript : MonoBehaviour
             }
         }
 
+    }
+
+    public void LoadLevel()
+    {
+        for (int i = 0; i < pos.Length; i++)
+        {
+            if (scrollPos < pos[i] + (distance / 2) && scrollPos > pos[i] - (distance / 2))
+            {
+                switch (i)
+                {
+                    case 0:
+                        GameSceneManager.Instance.LoadaLevel1();
+                        break;
+                    case 1:
+                        Debug.Log("level 2");
+                        break;
+                    case 2:
+                        Debug.Log("level 3");
+                        break;
+                    case 3:
+                        Debug.Log("level 4");
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
     }
 }
 
