@@ -53,7 +53,7 @@ public class UI_Inventory : MonoBehaviour
         RefreshInventoryItems();
     }
 
-    void RefreshInventoryItems()
+    public void RefreshInventoryItems()
     {
         foreach (Transform child in itemSlotContainer)
         {
@@ -106,6 +106,7 @@ public class UI_Inventory : MonoBehaviour
 
     public void SetEquipment(Item item)
     {
+        
         switch (item.itemType)
         {
             case Item.ItemType.WoodSword:

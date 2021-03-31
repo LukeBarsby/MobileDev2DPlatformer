@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class wEndState : State
 {
@@ -10,6 +11,9 @@ public class wEndState : State
     }
     public override void Start()
     {
+        AnalyticsResult result = Analytics.CustomEvent("Level 1 beat");
+        Debug.Log("Result = " + result);
+
         Debug.Log("scream");
         Debug.Log("UI screen to exit manually or return to menu");
         Debug.Log("dead sprite");

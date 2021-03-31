@@ -28,8 +28,16 @@ public static class SaveSystem
         }
         else
         {
-            Debug.LogError("Save data not found in " + path);
+            Debug.Log("Save data not found in " + path);
             return null;
+        }
+    }
+    public static void DeleteSavedData()
+    {
+        string path = Application.persistentDataPath + "/player.save";
+        if (File.Exists(path))
+        {
+            File.Delete(path);
         }
     }
 }

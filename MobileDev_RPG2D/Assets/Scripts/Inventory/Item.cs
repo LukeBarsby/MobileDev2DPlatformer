@@ -82,7 +82,7 @@ public class Item
             case ItemType.Gold:
                 return ItemAssets.Instance.gold;
             default:
-                return ItemAssets.Instance.woodSword;
+                return ItemAssets.Instance.gold;
         }
     }
 

@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 0
+  canUseRange: 1
 --- !u!1 &5880054267383315214
 GameObject:
   m_ObjectHideFlags: 0

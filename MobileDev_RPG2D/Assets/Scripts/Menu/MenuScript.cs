@@ -16,6 +16,7 @@ public class MenuScript : MonoBehaviour
     private void Awake()
     {
         sb = scrollBar.GetComponent<Scrollbar>();
+        sb.value = 0.66f;
     }
     private void Start()
     {
@@ -44,25 +45,26 @@ public class MenuScript : MonoBehaviour
             }
         }
     }
-    public void PlayGame()
-    {
-    }
 
     public void StorePage()
     {
         sb.value = 0;
+        PlayerController.Instance.InventoryGameObject.SetActive(false);
     }
     public void InventoryPage()
     {
         sb.value = 0.33f;
+        PlayerController.Instance.InventoryGameObject.SetActive(true);
     }
     public void PlayPage()
     {
         sb.value = 0.66f;
+        PlayerController.Instance.InventoryGameObject.SetActive(false);
     }
     public void SettingsPage()
     {
         sb.value = 0.99f;
+        PlayerController.Instance.InventoryGameObject.SetActive(false);
     }
 
 }

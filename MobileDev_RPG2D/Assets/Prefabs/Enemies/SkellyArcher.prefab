@@ -330,6 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 1
+  canUseRange: 1
 --- !u!1001 &728917169957737060
 PrefabInstance:
   m_ObjectHideFlags: 0

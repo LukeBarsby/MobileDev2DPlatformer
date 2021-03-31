@@ -13,6 +13,7 @@ public class TakeDamageScript : MonoBehaviour
         vase
     }
     public Types enemyType;
+    public bool canUseRange;
 
     public void TakeDamage(float damage)
     {
@@ -31,5 +32,9 @@ public class TakeDamageScript : MonoBehaviour
             default:
                 break;
         }
+    }
+    public bool CanUseRange()
+    {
+        return canUseRange;
     }
 }

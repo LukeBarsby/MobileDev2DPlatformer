@@ -83,9 +83,9 @@ public class ProjectileController : MonoBehaviour, IPooledObject
         {
             if (collision.transform.tag == "Player")
             {
-                if (collision.transform.GetComponent<TakeDamageScript>() != null)
+                if (collision.transform.GetComponent<PlayerController>() != null)
                 {
-                    collision.transform.GetComponent<TakeDamageScript>().TakeDamage(PlayerController.Instance.rangeDamage);
+                    PlayerController.Instance.TakeDamage(damage);
                 }
             }
         }

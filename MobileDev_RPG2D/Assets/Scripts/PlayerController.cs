@@ -5,6 +5,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
+using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : Singleton<PlayerController>
@@ -26,19 +27,20 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] Text text;    
     [SerializeField] GameObject returnToMenuPanel;
     [SerializeField] GameObject UI;
+
     bool settingsOpen;
 
     #endregion
 
     #region weapon / armour
     [Header("Weapon / Armour Slots")]
-    [SerializeField] GameObject swordSlot  = default;
-    [SerializeField] GameObject bowSlot    = default;
-    [SerializeField] GameObject shieldSlot = default;
-    [SerializeField] GameObject headSlot = default;
-    [SerializeField] GameObject chestSlot = default;
-    [SerializeField] GameObject legsSlot = default;
-    [SerializeField] GameObject feetSlot = default;
+    [SerializeField] public GameObject swordSlot  = default;
+    [SerializeField] public GameObject bowSlot    = default;
+    [SerializeField] public GameObject shieldSlot = default;
+    [SerializeField] public GameObject headSlot = default;
+    [SerializeField] public GameObject chestSlot = default;
+    [SerializeField] public GameObject legsSlot = default;
+    [SerializeField] public GameObject feetSlot = default;
     [SerializeField] Material armourMat;
     [SerializeField] Material standardMat;
     bool hasMeleeWeapon;
@@ -125,7 +127,7 @@ public class PlayerController : Singleton<PlayerController>
     #endregion
 
     #region Inventory Stuff
-    [SerializeField] GameObject InventoryGameObject = default;
+    [SerializeField] public GameObject InventoryGameObject = default;
     bool invenOpen = false;
     bool chestUiOpen = false;
     public Inventory inventory;
@@ -141,7 +143,17 @@ public class PlayerController : Singleton<PlayerController>
     #endregion
 
     #region SavedData
-    public int goldCount;
+    [HideInInspector] public int goldCount;
+    [HideInInspector] public bool spokenToOldMan;
+    [HideInInspector] public DateTime lastRewardTakenTime;
+    [HideInInspector] public DateTime newRewardTime;
+    [HideInInspector] public bool checkForNewReward;
+    [HideInInspector] public bool rewaradBeenTaken;
+    [HideInInspector] public bool PlayerLoaded;
+    [HideInInspector] public int dayCounter = 0;
+    [HideInInspector] public float musicVol;
+    [HideInInspector] public float sfxVol;
+    [HideInInspector] public int quality;
     #endregion
 
     void Awake()
@@ -152,7 +164,6 @@ public class PlayerController : Singleton<PlayerController>
 
     void Start()
     {
-
         headAnimator = headSlot.GetComponent<Animator>();
         bodyAnimator = chestSlot.GetComponent<Animator>();
         legsAnimator = legsSlot.GetComponent<Animator>();
@@ -171,8 +182,7 @@ public class PlayerController : Singleton<PlayerController>
         shieldSpriteRenderer = shieldSlot.GetComponent<SpriteRenderer>();
         bowSpriteRenderer = bowSlot.GetComponent<SpriteRenderer>();
 
-        inventory = new Inventory(UseItem, RemoveItem);
-        uiInventory.SetInventory(inventory);
+        SetUIInven();
 
         DisableUI();
 
@@ -183,9 +193,26 @@ public class PlayerController : Singleton<PlayerController>
         hasMeleeWeapon = false;
         meleeAttacking = true;
         SetIdle();
-        SavingSystem.Instance.LoadData();
+        if (SaveSystem.LoadPlayerData() != null)
+        {
+            SavingSystem.Instance.LoadData();
+        }
+        else
+        {
+            SaveSystem.SavePlayerData(this);
+        }
+        DailyReward.Instance.startCheck = true;
+        GameSceneManager.Instance.playerLoaded = true;
+        SoundControl.Instance.SetSoundLevels();
+        GraphicsControl.Instance.SetQuality();
     }
-    private void UseItem(Item item)
+
+    public void SetUIInven()
+    {
+        inventory = new Inventory(UseItem, RemoveItem);
+        uiInventory.SetInventory(inventory);
+    }
+    public void UseItem(Item item)
     {
         switch (item.itemType)
         {
@@ -288,9 +315,9 @@ public class PlayerController : Singleton<PlayerController>
         }
     }
 
-    void EquipGear(GameObject slot, Item item)
+    public void EquipGear(GameObject slot, Item item)
     {
-        if (slot.GetComponent<EquipedItem>().m_Item != item)
+        if (slot.GetComponent<EquipedItem>().m_Item != item && item != null)
         {
             slot.GetComponent<EquipedItem>().SetItem(item);
             uiInventory.SetEquipment(item);
@@ -415,11 +442,11 @@ public class PlayerController : Singleton<PlayerController>
         CheckRange();
         ChangeWeapon();
         SpecialTime();
+        
 
-
-        healthBar.value = currentHealth / maxHealth;
-        blockBar.value =  blockTimer / blockTime;
-        specialBar.value =  specialTimer / specialTime;
+        healthBar.value = (currentHealth / maxHealth);
+        blockBar.value =  (blockTimer / blockTime);
+        specialBar.value =  (specialTimer / specialTime);
     }
 
 
@@ -437,7 +464,7 @@ public class PlayerController : Singleton<PlayerController>
 
     void Block()
     {
-        if (blockTimer <= 0)
+        if (blockTimer <= 0 && hasShield)
         {
             canBlock = true;
             attacking = true;
@@ -473,8 +500,16 @@ public class PlayerController : Singleton<PlayerController>
         }
         else if (!canBlock || Input.touchCount > 0)
         {
-            damage -= (damage / defenceBuff);
-            currentHealth -= damage;
+            if (defenceBuff > 0)
+            {
+                damage = damage - (damage / defenceBuff);
+                currentHealth -= damage;
+            }
+            else
+            {
+                currentHealth -= damage;
+            }
+
             if (currentHealth <= 0)
             {
                 Die();
@@ -490,7 +525,10 @@ public class PlayerController : Singleton<PlayerController>
 
     void Die()
     {
-        SceneManager.LoadScene(0);
+        AnalyticsResult result = Analytics.CustomEvent("Player Died");
+        Debug.Log("Result = " + result);
+
+        
     }
 
     private void ChangeWeapon()
@@ -517,9 +555,9 @@ public class PlayerController : Singleton<PlayerController>
         {
             if (Input.touchCount <= 0 && hasBowWeapon)
             {
-                if (enemyCount.Count > 0)
+                if (enemyCount.Count > 0 && closestEnemy.GetComponent<TakeDamageScript>() != null)
                 {
-                    if (closestEnemy.GetComponent<TakeDamageScript>() != null && attackTimer <= 0)
+                    if (closestEnemy.GetComponent<TakeDamageScript>().CanUseRange() && attackTimer <= 0)
                     {
                         if (!bowAnimator.GetCurrentAnimatorStateInfo(0).IsName("BowBlend"))
                         {
@@ -547,22 +585,22 @@ public class PlayerController : Singleton<PlayerController>
                     swordSlot.SetActive(true);
                     speed = combatSpeed;
 
-                    for (int i = 0; i < enemyCount.Count; i++)
+                    if (!swordAnimator.GetCurrentAnimatorStateInfo(0).IsName("SwordBlend"))
                     {
-                        if (enemyCount[i].GetComponent<TakeDamageScript>() != null)
+                        swordAnimator.PlayInFixedTime("SwordBlend");
+                        attackTimer += meleeAttackRate / 2;
+                    }
+                    if (attackTimer <= 0)
+                    {
+                        for (int z = 0; z < enemyCount.Count; z++)
                         {
-                            if (!swordAnimator.GetCurrentAnimatorStateInfo(0).IsName("SwordBlend"))
+                            if (enemyCount[z].GetComponent<TakeDamageScript>() != null)
                             {
-                                swordAnimator.PlayInFixedTime("SwordBlend");
-                                attackTimer += meleeAttackRate / 2;
-                            }
-                            if (attackTimer <= 0)
-                            {
-                                enemyCount[i].GetComponent<TakeDamageScript>().TakeDamage(meleeDamage);
-                                attackTimer = 0;
-                                attackTimer = meleeAttackRate;
+                                enemyCount[z].GetComponent<TakeDamageScript>().TakeDamage(meleeDamage);
                             }
                         }
+                        attackTimer = 0;
+                        attackTimer = meleeAttackRate;
                     }
                 }
                 speed = orignalSpeed;
@@ -596,7 +634,6 @@ public class PlayerController : Singleton<PlayerController>
         {
             return;
         }
-        #region old
         for (int i = 0; i < enemyCount.Count; i++)
         {
             GameObject testEnemy = enemyCount[i];
@@ -616,7 +653,7 @@ public class PlayerController : Singleton<PlayerController>
                 }
             }
         }
-        #endregion
+
 
     }
 
@@ -633,7 +670,7 @@ public class PlayerController : Singleton<PlayerController>
         }
         for (int i = 0; i < enemyCount.Count; i++)
         {
-            if (Vector2.Distance(transform.position, enemyCount[i].transform.position) < attackRange)
+            if (Vector2.Distance(transform.position, enemyCount[i].transform.position) > attackRange)
             {
                 enemyCount.Remove(enemyCount[i]);
             }
@@ -643,7 +680,7 @@ public class PlayerController : Singleton<PlayerController>
     public void SwitchWeapon()
     {
         meleeAttacking = !meleeAttacking;
-        enemyCount.Clear();
+        attackTimer = 0;
         UpdateRange();
         if (meleeAttacking)
         {
@@ -863,11 +900,11 @@ public class PlayerController : Singleton<PlayerController>
 
     public void ReturnToMenu()
     {
+        GameSceneManager.Instance.gold = goldCount;
         SavingSystem.Instance.SaveData();
         OpenReturnMenu();
         DisableUI();
         GameSceneManager.Instance.ReturnToMenu();
-
     }
 
     public void EnableUI()
@@ -885,6 +922,22 @@ public class PlayerController : Singleton<PlayerController>
         chestSpriteRenderer.enabled = false;
         legsSpriteRenderer.enabled = false;
         feetSpriteRenderer.enabled = false;
+    }
+
+    public void ClearData()
+    {
+        goldCount = 0;
+        spokenToOldMan = false;
+        dayCounter = 0;
+        newRewardTime = DateTime.Now;
+        SetUIInven();
+        swordSlot.GetComponent<EquipedItem>().RemoveItem();
+        bowSlot.GetComponent<EquipedItem>().RemoveItem();
+        shieldSlot.GetComponent<EquipedItem>().RemoveItem();
+        headSlot.GetComponent<EquipedItem>().RemoveItem();
+        chestSlot.GetComponent<EquipedItem>().RemoveItem();
+        legsSlot.GetComponent<EquipedItem>().RemoveItem();
+        feetSlot.GetComponent<EquipedItem>().RemoveItem();
     }
 
 }

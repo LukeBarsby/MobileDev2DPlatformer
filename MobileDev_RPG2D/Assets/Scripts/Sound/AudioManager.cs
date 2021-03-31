@@ -55,10 +55,8 @@ public class AudioManager : Singleton<AudioManager>
         }
         clip.source.Stop();
     }
-
-
-
 }
+
 
 public class AudioGroups
 {

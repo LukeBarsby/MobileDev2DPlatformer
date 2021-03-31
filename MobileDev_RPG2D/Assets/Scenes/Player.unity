@@ -4779,7 +4779,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1815
 --- !u!114 &1226340998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4821,7 +4821,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1226341000
 RectTransform:
@@ -10245,7 +10245,11 @@ PrefabInstance:
     - target: {fileID: 7952284811642588895, guid: a01f7ff56ff2e1f42b6063f40afdb527, type: 3}
       propertyPath: UI
       value: 
-      objectReference: {fileID: 1226340995}
+      objectReference: {fileID: 1983897119}
+    - target: {fileID: 7952284811642588895, guid: a01f7ff56ff2e1f42b6063f40afdb527, type: 3}
+      propertyPath: inventoryPanel
+      value: 
+      objectReference: {fileID: 2045726495}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a01f7ff56ff2e1f42b6063f40afdb527, type: 3}
 --- !u!4 &4651662761372401299

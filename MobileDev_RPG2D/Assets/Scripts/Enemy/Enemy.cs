@@ -110,6 +110,7 @@ public abstract class Enemy : MonoBehaviour
     {
         if (timer <= 0)
         {
+            agent.ResetPath();
             Vector3 randomDir = Random.insideUnitSphere * idleMaxDistnce;
             randomDir += transform.position;
             NavMeshHit hit;
