@@ -12,11 +12,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  rsKeyList: []
-  rsLastCachedKeyList: []
-  configId: 
-  currentEnvironmentId: 
-  environments: []
+  rsKeyList:
+  - metadata:
+      entityId: 7c800440-0054-4baf-8361-cb3ca9478436
+    rs:
+      key: VersionNum
+      type: string
+      value: Version 1.2
+  - metadata:
+      entityId: 66ddb180-f2b7-46e8-a95b-cf3338a1a55a
+    rs:
+      key: GameTitle
+      type: string
+      value: Mobile Quest 1
+  rsLastCachedKeyList:
+  - metadata:
+      entityId: 7c800440-0054-4baf-8361-cb3ca9478436
+    rs:
+      key: VersionNum
+      type: string
+      value: Version 1.2
+  - metadata:
+      entityId: 66ddb180-f2b7-46e8-a95b-cf3338a1a55a
+    rs:
+      key: GameTitle
+      type: string
+      value: Mobile Quest 1
+  configId: 996ac420-451d-4118-9f50-1ba84166463d
+  currentEnvironmentId: 4f66ae83-72f2-4658-be0b-1ce486a0baad
+  environments:
+  - id: 4f66ae83-72f2-4658-be0b-1ce486a0baad
+    appId: 
+    name: Development
+    description: 
+    createdAt: 2021-03-31T16:52:18Z
+    updatedAt: 2021-03-31T16:52:18Z
+  - id: c0b19929-e356-4f51-bb57-7efd583c56d2
+    appId: 
+    name: Release (Default)
+    description: 
+    createdAt: 2021-03-31T16:52:18Z
+    updatedAt: 2021-03-31T16:52:18Z
   rulesList: []
   lastCachedRulesList: []
   addedRulesIDs: []
