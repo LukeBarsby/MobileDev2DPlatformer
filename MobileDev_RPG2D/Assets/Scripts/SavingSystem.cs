@@ -23,7 +23,6 @@ public class SavingSystem : Singleton<SavingSystem>
         PlayerController.Instance.musicVol = data.musicVol;
         PlayerController.Instance.sfxVol = data.sfxVol;
 
-        PlayerController.Instance.quality = data.quality;
 
         for (int i = 0; i < data.itemList.Count; i++)
         {

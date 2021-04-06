@@ -93,8 +93,8 @@ MonoBehaviour:
   _attackRange: 2
   _sightRange: 5
   _slider: {fileID: 235945919400072710}
-  _standardMat: {fileID: 2100000, guid: ba97107412ba3644fb5da463187f6c00, type: 2}
-  _hitMaterial: {fileID: 2100000, guid: 7907393ce022d87428a7052e735c5ac1, type: 2}
+  _standardMat: {fileID: 2100000, guid: b80ed09d66674264ab31735c4a59716c, type: 2}
+  _hitMaterial: {fileID: 2100000, guid: ee6209360991e254ba6e496700615d09, type: 2}
 --- !u!195 &1753109560
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -183,7 +183,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

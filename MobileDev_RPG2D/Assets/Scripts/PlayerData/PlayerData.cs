@@ -20,8 +20,6 @@ public class PlayerData
     public float sfxVol;
     public float musicVol;
 
-    //
-    public int quality;
 
     //public Item _swordSlot;
     //public Item _bowSlot ;
@@ -46,7 +44,6 @@ public class PlayerData
         sfxVol = player.sfxVol;
         musicVol = player.musicVol;
 
-        quality = player.quality;
     //_swordSlot = player.swordSlot.GetComponent<EquipedItem>().ReturnItem();
     //_bowSlot = player.bowSlot.GetComponent<EquipedItem>().ReturnItem();
     //_shieldSlot = player.shieldSlot.GetComponent<EquipedItem>().ReturnItem();

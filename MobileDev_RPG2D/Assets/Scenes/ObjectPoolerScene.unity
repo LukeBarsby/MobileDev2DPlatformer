@@ -222,10 +222,10 @@ MonoBehaviour:
   ironFeetArmour: {fileID: 21300000, guid: 01df42637b7ba2a48b224729213ebfb0, type: 3}
   healthPotion: {fileID: 21300000, guid: e906fbc0973f40b4197d6152e0fc4904, type: 3}
   gold: {fileID: 21300000, guid: 4a940435e14f06c498d40bf3c1485c76, type: 3}
-  woodMaterial: {fileID: 2100000, guid: 7e6b086d67fc60249b6c4eeaf6c6e63e, type: 2}
-  ironMaterial: {fileID: 2100000, guid: fc5b282e864760449aeb53090221e220, type: 2}
-  goldMaterial: {fileID: 2100000, guid: 4a380fc82fc052e459d2db5f7834b791, type: 2}
-  leatherMaterial: {fileID: 2100000, guid: 630ae5a963f7fa0438865b6c704f3541, type: 2}
+  woodMaterial: {fileID: 2100000, guid: bb88f46ae9bc88543b9e30106cc48299, type: 2}
+  ironMaterial: {fileID: 2100000, guid: 40336db2db16aff4fa442d14bb652995, type: 2}
+  goldMaterial: {fileID: 2100000, guid: 91048d861d48b0b43985e245c83d634e, type: 2}
+  leatherMaterial: {fileID: 2100000, guid: 368346f0b8a1382449f963d0329b2f8b, type: 2}
 --- !u!4 &487435738
 Transform:
   m_ObjectHideFlags: 0

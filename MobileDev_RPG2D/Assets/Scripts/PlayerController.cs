@@ -41,8 +41,6 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] public GameObject chestSlot = default;
     [SerializeField] public GameObject legsSlot = default;
     [SerializeField] public GameObject feetSlot = default;
-    [SerializeField] Material armourMat;
-    [SerializeField] Material standardMat;
     bool hasMeleeWeapon;
     bool hasBowWeapon;
     bool hasShield;
@@ -153,7 +151,6 @@ public class PlayerController : Singleton<PlayerController>
     [HideInInspector] public int dayCounter = 0;
     [HideInInspector] public float musicVol;
     [HideInInspector] public float sfxVol;
-    [HideInInspector] public int quality;
     #endregion
 
     void Awake()
@@ -204,7 +201,6 @@ public class PlayerController : Singleton<PlayerController>
         DailyReward.Instance.startCheck = true;
         GameSceneManager.Instance.playerLoaded = true;
         SoundControl.Instance.SetSoundLevels();
-        GraphicsControl.Instance.SetQuality();
     }
 
     public void SetUIInven()

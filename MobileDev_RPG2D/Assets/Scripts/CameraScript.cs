@@ -18,7 +18,5 @@ public class CameraScript : MonoBehaviour
         Vector3 desPos = player.transform.position + offset;
 
         transform.position = desPos;
-        //transform.LookAt(desPos);
-
     }
 }

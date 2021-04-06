@@ -293,8 +293,8 @@ MonoBehaviour:
   _sightRange: 6
   _stoppingDistance: 2
   _slider: {fileID: 5216964823709656031}
-  _standardMat: {fileID: 2100000, guid: ba97107412ba3644fb5da463187f6c00, type: 2}
-  _hitMaterial: {fileID: 2100000, guid: 7907393ce022d87428a7052e735c5ac1, type: 2}
+  _standardMat: {fileID: 2100000, guid: b80ed09d66674264ab31735c4a59716c, type: 2}
+  _hitMaterial: {fileID: 2100000, guid: ee6209360991e254ba6e496700615d09, type: 2}
 --- !u!195 &5250058317524837277
 NavMeshAgent:
   m_ObjectHideFlags: 0
