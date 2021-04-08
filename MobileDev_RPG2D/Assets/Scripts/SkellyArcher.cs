@@ -14,8 +14,6 @@ public class SkellyArcher : Enemy
     [SerializeField] float _attackSpeed = default;
     [SerializeField] float _attackRange = default;
     [SerializeField] float _sightRange = default;
-    [SerializeField] float _stoppingDistance = default;
-    GameObject _target;
     bool attacking;
     Animate animate;
     #endregion

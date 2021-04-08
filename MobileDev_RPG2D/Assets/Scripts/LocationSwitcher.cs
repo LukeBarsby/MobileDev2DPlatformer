@@ -42,9 +42,6 @@ public class LocationSwitcher : MonoBehaviour
     [SerializeField] GameObject BossRoomSpawnPoint = default;
     [SerializeField] GameObject BossRoomExitPoint = default;
 
-
-
-
     void Start()
     {
         PlayerController.Instance.EnableUI();

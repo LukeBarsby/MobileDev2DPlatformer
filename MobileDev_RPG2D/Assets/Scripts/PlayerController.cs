@@ -12,14 +12,11 @@ public class PlayerController : Singleton<PlayerController>
 {
     #region Components
     Rigidbody2D rb;
-    CircleCollider2D cp;
     #endregion
 
     #region UI Elements
     [Header("UI Elements")]
     [SerializeField] Joystick joystick = default;
-    [SerializeField] Button button_Special = default;
-    [SerializeField] Button button_Switch = default;
     [SerializeField] Slider healthBar;
     [SerializeField] Slider blockBar;
     [SerializeField] Slider specialBar;
@@ -45,17 +42,13 @@ public class PlayerController : Singleton<PlayerController>
     bool hasBowWeapon;
     bool hasShield;
 
-    bool hasHeadArmour;
-    bool hasBodyArmour;
-    bool hasLegArmour;
-    bool hasFeetArmour;
+
 
     //Animators and Rennderes
     Animator headAnimator;
     Animator bodyAnimator;
     Animator legsAnimator;
     Animator feetAnimator;
-
     Animator swordAnimator;
     Animator bowAnimator;
     Animator shieldAnimator;
@@ -117,7 +110,6 @@ public class PlayerController : Singleton<PlayerController>
     #endregion
 
     #region Movement Stuff
-    //movement
     Vector2 movement;
     float timer;
     float horizontal;
@@ -156,7 +148,6 @@ public class PlayerController : Singleton<PlayerController>
     void Awake()
     {
         rb   = GetComponent<Rigidbody2D>();
-        cp   = GetComponent<CircleCollider2D>();
     }
 
     void Start()
