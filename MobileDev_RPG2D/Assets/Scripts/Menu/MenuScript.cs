@@ -16,7 +16,6 @@ public class MenuScript : MonoBehaviour
     private void Awake()
     {
         sb = scrollBar.GetComponent<Scrollbar>();
-        sb.value = 0.66f;
     }
     private void Start()
     {
@@ -27,6 +26,7 @@ public class MenuScript : MonoBehaviour
             pos[i] = distance * i;
         }
         scrollPos = sb.value;
+        sb.value = 0.66f;
     }
     private void Update()
     {
@@ -50,21 +50,25 @@ public class MenuScript : MonoBehaviour
     {
         sb.value = 0;
         PlayerController.Instance.InventoryGameObject.SetActive(false);
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Select");
     }
     public void InventoryPage()
     {
         sb.value = 0.33f;
         PlayerController.Instance.InventoryGameObject.SetActive(true);
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Select");
     }
     public void PlayPage()
     {
         sb.value = 0.66f;
         PlayerController.Instance.InventoryGameObject.SetActive(false);
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Select");
     }
     public void SettingsPage()
     {
         sb.value = 0.99f;
         PlayerController.Instance.InventoryGameObject.SetActive(false);
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Select");
     }
 
 }

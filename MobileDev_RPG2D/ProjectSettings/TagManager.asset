@@ -15,6 +15,7 @@ TagManager:
   - Wall
   - EnemyProjectile
   - Menu
+  - PlayerHolder
   layers:
   - Default
   - TransparentFX

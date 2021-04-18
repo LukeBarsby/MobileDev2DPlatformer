@@ -27,12 +27,13 @@ public class NPC : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && !beenOpened)
+        if (collision.tag == "PlayerHolder" && !beenOpened && pc.spokenToOldMan == false)
         {
             pc.OpenDialogMenu(text);
             for (int i = 0; i < items.Length; i++)
             {
                 pc.GiveItem(items[i]);
+                pc.spokenToOldMan = true;
             }
             beenOpened = true;
         }

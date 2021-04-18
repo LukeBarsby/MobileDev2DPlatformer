@@ -21,14 +21,14 @@ public class Chest : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && !ItembeenTaken)
+        if (collision.tag == "PlayerHolder" && !ItembeenTaken)
         {
             pc.OpenChestUI(m_Item, this.gameObject);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && !ItembeenTaken)
+        if (collision.tag == "PlayerHolder" && !ItembeenTaken)
         {
             pc.OpenChestUI(m_Item, this.gameObject);
             CloseChest();

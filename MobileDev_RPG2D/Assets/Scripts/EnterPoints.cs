@@ -22,7 +22,10 @@ public class EnterPoints : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        ls.TriggerEnter(id);
+        if (collision.transform.tag == "PlayerHolder")
+        {
+            ls.TriggerEnter(id);
+        }
     }
 
     private void OnDestroy()

@@ -163,7 +163,7 @@ public abstract class Enemy : MonoBehaviour
         hit = true;
         hitTimer = 0;
         hitTimer = .25f;
-
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "EnemyDamage");
         currentHealth -= meleeDamage;
         if (currentHealth <= 0)
         {
@@ -174,5 +174,6 @@ public abstract class Enemy : MonoBehaviour
     void Die()
     {
         gameObject.SetActive(false);
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "EnemyDie");
     }
 }

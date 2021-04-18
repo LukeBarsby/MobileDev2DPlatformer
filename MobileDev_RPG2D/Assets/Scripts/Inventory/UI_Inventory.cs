@@ -73,7 +73,6 @@ public class UI_Inventory : MonoBehaviour
             spriteImage.sprite = item.GetSprite();
             itemSlotTemplate.GetComponent<ItemIdentifier>().SetItem(item);
 
-
             if (item.amount > 1)
             {
                 itemCount.text = item.amount.ToString();
@@ -106,7 +105,6 @@ public class UI_Inventory : MonoBehaviour
 
     public void SetEquipment(Item item)
     {
-        
         switch (item.itemType)
         {
             case Item.ItemType.WoodSword:

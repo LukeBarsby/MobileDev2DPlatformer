@@ -68,7 +68,6 @@ public class ProjectileController : MonoBehaviour, IPooledObject
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        ResetObj();
         if (fireMode == ProjectileType.PlayerArrow)
         {
             if (collision.transform.tag == "Enemy")
@@ -76,29 +75,34 @@ public class ProjectileController : MonoBehaviour, IPooledObject
                 if (collision.transform.GetComponent<TakeDamageScript>() != null)
                 {
                     collision.transform.GetComponent<TakeDamageScript>().TakeDamage(PlayerController.Instance.rangeDamage);
+                    ResetObj();
                 }
             }
         }
-        else if (fireMode == ProjectileType.EnemyArrow)
+        else if (fireMode == ProjectileType.EnemyArrow || fireMode == ProjectileType.EnemyFireball)
         {
-            if (collision.transform.tag == "Player")
+            if (collision.transform.tag == "PlayerHolder")
             {
-                if (collision.transform.GetComponent<PlayerController>() != null)
+                if (collision.transform.GetComponentInParent<PlayerController>() != null)
                 {
                     PlayerController.Instance.TakeDamage(damage);
+                    ResetObj();
                 }
             }
+            else if (collision.transform.tag == "Untagged")
+            {
+                ResetObj();
+            }
         }
-
-
     }
 
     void ResetObj()
     {
-        gameObject.SetActive(false);
-        shoot = false;
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Explosion");
         direction = Vector3.zero;
+        shoot = false;
         rb.velocity = Vector3.zero;
+        gameObject.SetActive(false);
     }
 
     public void ShootFireBall()
@@ -110,10 +114,12 @@ public class ProjectileController : MonoBehaviour, IPooledObject
     {
         if (fireMode == ProjectileType.PlayerArrow)
         {
+            AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Fire");
             AddValues(speed, PlayerController.Instance.rangeDamage, (PlayerController.Instance.closestEnemy.transform.position - PlayerController.Instance.transform.position).normalized, collisionLayer);
         }
         if (fireMode == ProjectileType.EnemyArrow)
         {
+            AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Fire");
             AddValues(speed, damage, (PlayerController.Instance.transform.position - transform.position).normalized, collisionLayer);
         }
     }

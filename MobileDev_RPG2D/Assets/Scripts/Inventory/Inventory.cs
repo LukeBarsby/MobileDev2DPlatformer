@@ -48,7 +48,34 @@ public class Inventory
 
     public void RemoveItem(Item item)
     {
-        removeItemAction(item);
+        if (item.IsStackable())
+        {
+            Item itemAlreadyInInventory = null;
+            foreach (Item invenItem in itemList)
+            {
+                if (invenItem.itemType == item.itemType)
+                {
+                    invenItem.amount -= item.amount;
+                    itemAlreadyInInventory = invenItem;
+                    OnItemListChanged?.Invoke(this, EventArgs.Empty);
+                }
+            }
+            if (itemAlreadyInInventory != null && itemAlreadyInInventory.amount <= 0)
+            {
+                itemList.Remove(itemAlreadyInInventory);
+                OnItemListChanged?.Invoke(this, EventArgs.Empty);
+            }
+        }
+        else if (!item.IsStackable())
+        {
+            removeItemAction(item);
+        }
+        else
+        {
+            itemList.Remove(item);
+            OnItemListChanged?.Invoke(this, EventArgs.Empty);
+        }
+        OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
     public void UseItem(Item item)
     {

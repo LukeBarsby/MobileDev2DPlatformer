@@ -14,11 +14,9 @@ public class wEndState : State
         AnalyticsResult result = Analytics.CustomEvent("Level 1 beat");
         Debug.Log("Result = " + result);
 
-        Debug.Log("scream");
-        Debug.Log("UI screen to exit manually or return to menu");
-        Debug.Log("dead sprite");
         wizardObj.ls.EnableExit();
-        PlayerController.Instance.OpenReturnMenu();
+        PlayerController.Instance.LeaveLevel();
+        wizardObj.gameObject.SetActive(false);
     }
 
     public override void Update()

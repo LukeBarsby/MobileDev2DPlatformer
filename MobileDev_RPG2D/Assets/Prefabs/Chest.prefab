@@ -55,7 +55,7 @@ MonoBehaviour:
     damage: 40
     knockback: 1
     defence: 0
-    material: {fileID: 2100000, guid: fc5b282e864760449aeb53090221e220, type: 2}
+    material: 0
   ItembeenTaken: 0
 --- !u!95 &4125446410784441227
 Animator:
@@ -95,7 +95,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: b94309a391d74794ca54490c3450de6b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

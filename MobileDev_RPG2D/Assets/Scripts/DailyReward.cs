@@ -53,13 +53,12 @@ public class DailyReward : Singleton<DailyReward>
 
     public void GetReward()
     {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Select");
         PlayerController.Instance.goldCount += days[PlayerController.Instance.dayCounter];
         GameSceneManager.Instance.gold += days[PlayerController.Instance.dayCounter];
         PlayerController.Instance.dayCounter++;
-
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Select");
         AnalyticsResult result = Analytics.CustomEvent("Taken Daily Reward");
-        Debug.Log("Result dailyReward = " + result);
-
         if (PlayerController.Instance.dayCounter >= 30)
         {
             PlayerController.Instance.dayCounter = 0;
@@ -75,6 +74,7 @@ public class DailyReward : Singleton<DailyReward>
 
     public void CloseRewardBox()
     {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Cancel");
         OpenRewardBox();
     }
     public void OpenRewardBox()
@@ -84,9 +84,10 @@ public class DailyReward : Singleton<DailyReward>
             rewardBoxOpen = !rewardBoxOpen;
             if (rewardBoxOpen)
             {
+                AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Select");
                 rewardBox.SetActive(true);
                 CloseButton.SetActive(true);
-                rewardAmount.text = days[PlayerController.Instance.dayCounter].ToString();
+                rewardAmount.text =  "Day: " + PlayerController.Instance.dayCounter + " + " + days[PlayerController.Instance.dayCounter].ToString() + "g";
             }
             else if(!rewardBoxOpen)
             {

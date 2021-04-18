@@ -155,11 +155,116 @@ MonoBehaviour:
   m_audioMixer: {fileID: 24100000, guid: c7482ef6c2f7e664da13838146cbbd89, type: 2}
   musicGroup: Music
   sfxGroup: SFX
-  music: []
+  music:
+  - name: MainMenu
+    sound: {fileID: 8300000, guid: 6dd11f87785effc42b6a12d1e7030e5f, type: 3}
+    volume: 0.5
+    loop: 1
+    source: {fileID: 0}
+  - name: BossMusic
+    sound: {fileID: 8300000, guid: 829a60ba36009f746b4fcb86eb816aec, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: LevelMusic
+    sound: {fileID: 8300000, guid: 254c68c6c87d03649a35170c3eef00cf, type: 3}
+    volume: 0.5
+    loop: 1
+    source: {fileID: 0}
   sfx:
   - name: ping
     sound: {fileID: 8300000, guid: ac0dde85096f6f54a8d1f1d9d8d1142b, type: 3}
-    volume: 0.4
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Arrow
+    sound: {fileID: 8300000, guid: 20281f38bea5fe6429cb1a269aff6660, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Cancel
+    sound: {fileID: 8300000, guid: 3b0ff96e676a5a1478211aea6f6194b7, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Door
+    sound: {fileID: 8300000, guid: 61e910deb18025945af2dbe134149a67, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDamage
+    sound: {fileID: 8300000, guid: 2776dab8270d70849bd32deb0ccc5a9e, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDie
+    sound: {fileID: 8300000, guid: 40ccf0ed6b2139d4f82b6b71a57495df, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: FoundItem
+    sound: {fileID: 8300000, guid: 42fb8eebcb9470e4c960a96d9cc8338b, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GetHealth
+    sound: {fileID: 8300000, guid: 429a3ed409c149849be91d3e99b12fd9, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerHurt
+    sound: {fileID: 8300000, guid: 03c60663437e09442b8b4435d64d15e6, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerDies
+    sound: {fileID: 8300000, guid: ccc365d3c8973ad4c8f7013c9fa26536, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LowHealth
+    sound: {fileID: 8300000, guid: 03c60663437e09442b8b4435d64d15e6, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GetMoney
+    sound: {fileID: 8300000, guid: fa8267112d0bd0b4a914971fb8ebaa39, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BossSpawn
+    sound: {fileID: 8300000, guid: 13fc65b2599b9f74c9a200e3ed396fa4, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BossDies
+    sound: {fileID: 8300000, guid: bdad12ba5c4d2c94fb605e5d9b2cdc3f, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Select
+    sound: {fileID: 8300000, guid: a0117093f5efd6b4db5d0f75c60e1b3c, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Block
+    sound: {fileID: 8300000, guid: 52c7b3a73e06e734da8cb7db25a94623, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Sword
+    sound: {fileID: 8300000, guid: f46c7e81c91aca54286312094154276b, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Fire
+    sound: {fileID: 8300000, guid: 9836e75895e400e45a38210120f8e7c0, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Explosion
+    sound: {fileID: 8300000, guid: c4284f23daf233a4c84000306f98f31d, type: 3}
+    volume: 1
     loop: 0
     source: {fileID: 0}
 --- !u!4 &87909745

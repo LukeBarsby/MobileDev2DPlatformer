@@ -10,20 +10,17 @@ public class Animate : MonoBehaviour
     Animator anim;
     NavMeshAgent agent;
     GameObject target;
-    bool isMoving;
     bool isAttacking;
     void Start()
     {
         anim = GetComponent<Animator>();
         agent = GetComponentInParent<NavMeshAgent>();
         target = PlayerController.Instance.gameObject;
-        isMoving = false;
-        
     }
 
     void Update()
     {
-        if (isAttacking)
+        if (isAttacking)//attacking
         {
             if (hasAttackAnim)
             {
@@ -32,21 +29,20 @@ public class Animate : MonoBehaviour
             LookAtPlayer();
             anim.SetFloat("Horizontal", attackDir.x);
             anim.SetFloat("Vertical", attackDir.y);
+            anim.SetBool("Moving", false);
         }
-        else if (!agent.isStopped)
+        if (agent.isStopped)
+        {
+            anim.SetBool("Moving", false);
+        }
+        else if (!agent.isStopped)//moving
         {
             if (hasAttackAnim)
             {
                 anim.SetBool("Attacking", isAttacking);
             }
-            isMoving = true;
-            anim.SetBool("Moving", isMoving);
+            anim.SetBool("Moving", true);
             Change();
-        }
-        else
-        {
-            isMoving = false;
-            anim.SetBool("Moving", isMoving);
         }
     }
 

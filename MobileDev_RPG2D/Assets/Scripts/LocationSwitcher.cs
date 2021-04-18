@@ -62,84 +62,92 @@ public class LocationSwitcher : MonoBehaviour
         {
             //outside
             case "CastleEnter":
+                StartCoroutine(TravelEffect(CastleSpawnPoint));
                 outsideArea.SetActive(false);
                 casteArea.SetActive(true);
-                PlayerController.Instance.transform.position = CastleSpawnPoint.transform.position;
                 break;
             case "EnterOutside":
                 outsideArea.SetActive(true);
                 casteArea.SetActive(false);
-                PlayerController.Instance.transform.position = OutsideCaslteSpawnPoint.transform.position;
+                StartCoroutine(TravelEffect(OutsideCaslteSpawnPoint));
                 break;
             //caslte
             case "CastleEnterUp1":
                 casteArea.SetActive(false);
                 castleUpperArea.SetActive(true);
-                PlayerController.Instance.transform.position = CastleUpperSpawnPoint1.transform.position;
+                StartCoroutine(TravelEffect(CastleUpperSpawnPoint1));
                 break;
             case "CastleEnterUp2":
                 casteArea.SetActive(false);
                 castleUpperArea.SetActive(true);
-                PlayerController.Instance.transform.position = CastleUpperSpawnPoint2.transform.position;
+                StartCoroutine(TravelEffect(CastleUpperSpawnPoint2));
                 break;
             case "CastleEnterUp3":
                 casteArea.SetActive(false);
                 castleUpperArea.SetActive(true);
-                PlayerController.Instance.transform.position = CastleUpperSpawnPoint3.transform.position;
+                StartCoroutine(TravelEffect(CastleUpperSpawnPoint3));
                 break;
             case "CastleEnterUp4":
                 casteArea.SetActive(false);
                 castleUpperArea.SetActive(true);
-                PlayerController.Instance.transform.position = CastleUpperSpawnPoint4.transform.position;
+                StartCoroutine(TravelEffect(CastleUpperSpawnPoint4));
                 break;
             case "EnterDungeon":
                 casteArea.SetActive(false);
                 castleLowerArea.SetActive(true);
-                PlayerController.Instance.transform.position = CastleLowerSpawnPoint1.transform.position;
+                StartCoroutine(TravelEffect(CastleLowerSpawnPoint1));
                 break;
             //castle Upper
             case "CastleEnterDown1":
                 casteArea.SetActive(true);
                 castleUpperArea.SetActive(false);
-                PlayerController.Instance.transform.position = CastleSpawnPoint1.transform.position;
+                StartCoroutine(TravelEffect(CastleSpawnPoint1));
                 break;
             case "CastleEnterDown2":
                 casteArea.SetActive(true);
                 castleUpperArea.SetActive(false);
-                PlayerController.Instance.transform.position = CastleSpawnPoint2.transform.position;
+                StartCoroutine(TravelEffect(CastleSpawnPoint2));
                 break;
             case "CastleEnterDown3":
                 casteArea.SetActive(true);
                 castleUpperArea.SetActive(false);
-                PlayerController.Instance.transform.position = CastleSpawnPoint3.transform.position;
+                StartCoroutine(TravelEffect(CastleSpawnPoint3));
                 break;
             case "CastleEnterDown4":
                 casteArea.SetActive(true);
                 castleUpperArea.SetActive(false);
-                PlayerController.Instance.transform.position = CastleSpawnPoint4.transform.position;
+                StartCoroutine(TravelEffect(CastleSpawnPoint4));
                 break;
             //Castle Lower
             case "CastleLowerEnterUp":
                 casteArea.SetActive(true);
                 castleLowerArea.SetActive(false);
-                PlayerController.Instance.transform.position = CastleDungeonSpawnPoint.transform.position;
+                StartCoroutine(TravelEffect(CastleDungeonSpawnPoint));
                 break;
             case "CastleLowerEnterBoss":
                 bossRoomArea.SetActive(true);
                 castleLowerArea.SetActive(false);
                 BossRoomExitPoint.SetActive(false);
-                PlayerController.Instance.transform.position = BossRoomSpawnPoint.transform.position;
+                StartCoroutine(TravelEffect(BossRoomSpawnPoint));
                 break;
             //Boss room
             case "BossRoomExit":
                 bossRoomArea.SetActive(false);
                 castleLowerArea.SetActive(true);
-                PlayerController.Instance.transform.position = CastleLowerSpawnPoint2.transform.position;
+                StartCoroutine(TravelEffect(CastleLowerSpawnPoint2));
                 break;
             default:
                 Debug.Log("incorrect spelling from enter points");
                 break;
         }
+    }
+
+    IEnumerator TravelEffect(GameObject location)
+    {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Door");
+        GameSceneManager.Instance.transition.Play("BlackToClear");
+        PlayerController.Instance.transform.position = location.transform.position;
+        yield return new WaitForSeconds(1);
     }
 
     public void EnableExit()

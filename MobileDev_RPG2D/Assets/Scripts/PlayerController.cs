@@ -24,6 +24,8 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] Text text;    
     [SerializeField] GameObject returnToMenuPanel;
     [SerializeField] GameObject UI;
+    [SerializeField] GameObject deathScreen;
+    [SerializeField] GameObject endScreen;
 
     bool settingsOpen;
 
@@ -78,12 +80,14 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] float meleeAttackRange = default;
     [SerializeField] float rangeAttackRange = default;
     bool meleeAttacking;
-    float currentHealth;
+    public float currentHealth;
     [SerializeField] float dragTime = default;
     [SerializeField] float meleeDamage = default;
     [SerializeField] float defenceBuff = default;
     [SerializeField] public float rangeDamage = default;
     [SerializeField] public float rangeKnockBack = default;
+    int deathCounter;
+    float tickTimer;
     #endregion
 
     #region Block stuff
@@ -129,7 +133,7 @@ public class PlayerController : Singleton<PlayerController>
     #endregion
 
     #region TicDamage
-    [SerializeField] float laserDamage = default;
+    [SerializeField] public float laserDamage = default;
     #endregion
 
     #region SavedData
@@ -143,6 +147,7 @@ public class PlayerController : Singleton<PlayerController>
     [HideInInspector] public int dayCounter = 0;
     [HideInInspector] public float musicVol;
     [HideInInspector] public float sfxVol;
+    [HideInInspector] public List<string> facebookLoginDetails;
     #endregion
 
     void Awake()
@@ -246,6 +251,12 @@ public class PlayerController : Singleton<PlayerController>
                 EquipGear(feetSlot, item);
                 break;
             case Item.ItemType.HealthPotion:
+                currentHealth += 25;
+                if (currentHealth >= maxHealth)
+                {
+                    currentHealth = maxHealth;
+                }
+                inventory.RemoveItem(new Item { itemType = Item.ItemType.HealthPotion, stackable = true, amount = 1 });
                 break;
             default:
                 break;
@@ -308,7 +319,7 @@ public class PlayerController : Singleton<PlayerController>
         {
             slot.GetComponent<EquipedItem>().SetItem(item);
             uiInventory.SetEquipment(item);
-
+            AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Select");
             GearCheck(item, item.GetMaterial(), true);
         }
     }
@@ -316,7 +327,7 @@ public class PlayerController : Singleton<PlayerController>
     {
         slot.GetComponent<EquipedItem>().RemoveItem();
         uiInventory.UnsetEquipment(item);
-
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Cancel");
         GearCheck(item, skinMat, false);
     }
 
@@ -342,7 +353,7 @@ public class PlayerController : Singleton<PlayerController>
                 if (shieldSlot.GetComponent<EquipedItem>().m_Item != null)
                 {
                     hasShield = true;
-                    swordSpriteRenderer.material = mat;
+                    shieldSpriteRenderer.material = mat;
                     defenceBuff += item.defence;
                 }
                 else
@@ -426,7 +437,10 @@ public class PlayerController : Singleton<PlayerController>
 
     void Update()
     {
-        CheckRange();
+        if (enemyCount.Count > 0)
+        {
+            CheckRange();
+        }
         ChangeWeapon();
         SpecialTime();
         
@@ -483,7 +497,7 @@ public class PlayerController : Singleton<PlayerController>
             attacking = false;
             shieldAnimator.Play("ShieldBlend");
             blockTimer = blockTime;
-            
+            AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Block");
         }
         else if (!canBlock || Input.touchCount > 0)
         {
@@ -491,10 +505,12 @@ public class PlayerController : Singleton<PlayerController>
             {
                 damage = damage - (damage / defenceBuff);
                 currentHealth -= damage;
+                AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "PlayerHurt");
             }
             else
             {
                 currentHealth -= damage;
+                AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "PlayerHurt");
             }
 
             if (currentHealth <= 0)
@@ -506,16 +522,37 @@ public class PlayerController : Singleton<PlayerController>
 
     public void TakeTicDamage(float damage)
     {
-        damage -= (damage / defenceBuff);
+        if (defenceBuff > 0)
+        {
+            damage -= (damage / defenceBuff);
+        }
         currentHealth -= damage * Time.deltaTime;
+
+        if (tickTimer <= 0)
+        {
+            AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "PlayerHurt");
+            tickTimer = 1;
+        }
+        if (tickTimer > 0)
+        {
+            tickTimer -= Time.deltaTime;
+        }
     }
 
     void Die()
     {
         AnalyticsResult result = Analytics.CustomEvent("Player Died");
-        Debug.Log("Result = " + result);
-
-        
+        if (deathCounter < 1)
+        {
+            deathScreen.SetActive(true);
+            deathCounter++;
+        }
+        else if (deathCounter > 0)
+        {
+            deathScreen.SetActive(false);
+            ReturnToMenu();
+        }
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "PlayerDies");
     }
 
     private void ChangeWeapon()
@@ -579,6 +616,7 @@ public class PlayerController : Singleton<PlayerController>
                     }
                     if (attackTimer <= 0)
                     {
+                        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Sword");
                         for (int z = 0; z < enemyCount.Count; z++)
                         {
                             if (enemyCount[z].GetComponent<TakeDamageScript>() != null)
@@ -603,6 +641,7 @@ public class PlayerController : Singleton<PlayerController>
 
     private void FireArrow()
     {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Arrow");
         ObjectPooler.Instance.SpawnFromPool("PlayerArrow", transform.position, quaternion.identity);
     }
 
@@ -623,20 +662,23 @@ public class PlayerController : Singleton<PlayerController>
         }
         for (int i = 0; i < enemyCount.Count; i++)
         {
-            GameObject testEnemy = enemyCount[i];
-            if (Vector2.Distance(transform.position, testEnemy.transform.position) > attackRange)
+            if (enemyCount.Count > 0)
             {
-                continue;
-            }
-            if (closestEnemy == null)
-            {
-                closestEnemy = testEnemy;
-            }
-            else
-            {
-                if (Vector2.Distance(transform.position, testEnemy.transform.position) < Vector2.Distance(transform.position, closestEnemy.transform.position))
+                GameObject testEnemy = enemyCount[i];
+                if (Vector2.Distance(transform.position, testEnemy.transform.position) > attackRange)
+                {
+                    continue;
+                }
+                else if (closestEnemy == null )
                 {
                     closestEnemy = testEnemy;
+                }
+                else
+                {
+                    if (Vector2.Distance(transform.position, testEnemy.transform.position) < Vector2.Distance(transform.position, closestEnemy.transform.position))
+                    {
+                        closestEnemy = testEnemy;
+                    }
                 }
             }
         }
@@ -669,6 +711,7 @@ public class PlayerController : Singleton<PlayerController>
         meleeAttacking = !meleeAttacking;
         attackTimer = 0;
         UpdateRange();
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Select");
         if (meleeAttacking)
         {
             swordSlot.SetActive(true);
@@ -685,6 +728,7 @@ public class PlayerController : Singleton<PlayerController>
     {
         if (canUseSpecial)
         {
+            AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Select");
             //slot -> get special item script -> use function in script
             currentHealth += 50;
             specialTimer = specialTime;
@@ -718,14 +762,6 @@ public class PlayerController : Singleton<PlayerController>
     void OnTriggerExit2D(Collider2D collision)
     {
         enemyCount.Remove(collision.gameObject);
-    }
-
-    void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.tag == "Laser")
-        {
-            TakeTicDamage(laserDamage);
-        }    
     }
 
     private void Anim()
@@ -846,28 +882,33 @@ public class PlayerController : Singleton<PlayerController>
     {
         ChestInventoryPanel.SetActive(true);
         ChestInventoryPanel.GetComponent<ChestItemScript>().SetItem(item, inventory, chest);
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "FoundItem");
     }
 
     public void CloseChestItemScreen()
     {
         ChestInventoryPanel.SetActive(false);
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Cancel");
     }
 
     public void OpenDialogMenu(string text)
     {
         textBox.SetActive(true);
         this.text.text = text;
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Select");
     }
 
     public void CloseDialogMenu()
     {
         this.text.text = null;
         textBox.SetActive(false);
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Cancel");
     }
 
     public void GiveItem(Item item)
     {
         inventory.AddItem(item);
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "Select");
     }
 
     public void OpenReturnMenu()
@@ -884,14 +925,39 @@ public class PlayerController : Singleton<PlayerController>
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "ping");
     }
 
+    public void LeaveLevel()
+    {
+        if (FacebookSharing.Instance.ReturnLoggedIn() == true)
+        {
+            endScreen.SetActive(true);
+        }
+        else
+        {
+            endScreen.SetActive(false);
+            ReturnToMenu();
+        }
+    }
+
 
     public void ReturnToMenu()
     {
+        enemyCount.Clear();
+        invenOpen = false;
+        settingsOpen = false;
+        endScreen.SetActive(false);
+        currentHealth = maxHealth;
+        deathCounter = 0;
         GameSceneManager.Instance.gold = goldCount;
         SavingSystem.Instance.SaveData();
-        OpenReturnMenu();
         DisableUI();
         GameSceneManager.Instance.ReturnToMenu();
+    }
+
+    public void ShareToFacebook()
+    {
+        FacebookSharing.Instance.FacebookShare();
+        endScreen.SetActive(false);
+        ReturnToMenu();
     }
 
     public void EnableUI()
@@ -904,6 +970,9 @@ public class PlayerController : Singleton<PlayerController>
     }
     public void DisableUI()
     {
+        deathScreen.SetActive(false);
+        endScreen.SetActive(false);
+        returnToMenuPanel.SetActive(false);
         UI.SetActive(false);
         headSpriteRenderer.enabled = false;
         chestSpriteRenderer.enabled = false;
@@ -926,5 +995,4 @@ public class PlayerController : Singleton<PlayerController>
         legsSlot.GetComponent<EquipedItem>().RemoveItem();
         feetSlot.GetComponent<EquipedItem>().RemoveItem();
     }
-
 }

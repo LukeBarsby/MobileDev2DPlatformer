@@ -3,9 +3,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using Facebook.Unity;
 
-public class FacebookSharing : MonoBehaviour
+public class FacebookSharing : Singleton<FacebookSharing>
 {
-    
+    [SerializeField] GameObject facebookPanel = default;
 
     private void Awake()
     {
@@ -40,10 +40,16 @@ public class FacebookSharing : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        facebookPanel.SetActive(true);
+    }
+
     public void FacebookLogin()
     {
         var permuissions = new List<string>() { "public_profile", "email", "user_friends" };
         FB.LogInWithReadPermissions(permuissions);
+        facebookPanel.SetActive(false);
     }
 
     public void FacebookLogout()
@@ -51,10 +57,30 @@ public class FacebookSharing : MonoBehaviour
         FB.LogOut();
     }
 
+    public void CloseFacebookPopup()
+    {
+        facebookPanel.SetActive(false);
+    }
+
 
     public void FacebookShare()
     {
-        FB.ShareLink(new System.Uri("https://play.google.com/store"), "Check Out Mobile Quest",
-            "New Exciting Game", new System.Uri("https://www.gstatic.com/android/market_images/web/play_prism_hlock_2x.png"));
+        if (FB.IsLoggedIn)
+        {
+            FB.ShareLink(new System.Uri("https://play.google.com/store"), "Check Out Mobile Quest",
+                "New Exciting Game", new System.Uri("https://www.gstatic.com/android/market_images/web/play_prism_hlock_2x.png"));
+        }
+    }
+
+    public bool ReturnLoggedIn()
+    {
+        if (FB.IsLoggedIn)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

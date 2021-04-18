@@ -58,7 +58,7 @@ MonoBehaviour:
     damage: 10
     knockback: 0
     defence: 0
-    material: {fileID: 2100000, guid: 7e6b086d67fc60249b6c4eeaf6c6e63e, type: 2}
+    material: 0
   - itemType: 1
     amount: 1
     stackable: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
     damage: 0
     knockback: 0
     defence: 5
-    material: {fileID: 2100000, guid: 7e6b086d67fc60249b6c4eeaf6c6e63e, type: 2}
+    material: 0
   - itemType: 2
     amount: 1
     stackable: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
     damage: 10
     knockback: 0
     defence: 0
-    material: {fileID: 2100000, guid: 7e6b086d67fc60249b6c4eeaf6c6e63e, type: 2}
+    material: 0
   - itemType: 6
     amount: 1
     stackable: 0
@@ -85,7 +85,7 @@ MonoBehaviour:
     damage: 0
     knockback: 0
     defence: 5
-    material: {fileID: 2100000, guid: 630ae5a963f7fa0438865b6c704f3541, type: 2}
+    material: 3
 --- !u!212 &5755347920946588582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -105,7 +105,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: b80ed09d66674264ab31735c4a59716c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

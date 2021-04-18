@@ -14,6 +14,7 @@ public class SavingSystem : Singleton<SavingSystem>
 
         PlayerController.Instance.goldCount = data.goldCount;
 
+        PlayerController.Instance.spokenToOldMan = data.spokenToOldMan;
         PlayerController.Instance.lastRewardTakenTime = data.lastRewardTakenTime;
         PlayerController.Instance.newRewardTime = data.newRewardTime;
         PlayerController.Instance.checkForNewReward = data.checkForNewReward;

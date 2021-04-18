@@ -32,5 +32,6 @@ public class VarseController : MonoBehaviour
         anim.Play("varseBroken");
         transform.tag = "Untagged";
         breakPot = true;
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "EnemyDie");
     }
 }

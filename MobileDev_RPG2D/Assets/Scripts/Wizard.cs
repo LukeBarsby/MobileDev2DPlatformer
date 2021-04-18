@@ -56,6 +56,10 @@ public class Wizard : StateMachine
 
     void Start()
     {
+        AudioManager.Instance.StopSound(AudioManager.Instance.music, "LevelMusic");
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "BossSpawn");
+        AudioManager.Instance.PlaySound(AudioManager.Instance.music, "BossMusic");
+
         ls = FindObjectOfType<LocationSwitcher>();
         spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
         agent = transform.parent.GetComponent<NavMeshAgent>();
@@ -112,7 +116,9 @@ public class Wizard : StateMachine
     }
     public void Die()
     {
-        gameObject.SetActive(false);
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfx, "BossDies");
+        AudioManager.Instance.StopSound(AudioManager.Instance.music, "BossMusic");
+
         SetState(new wEndState(this));
     }
 }
